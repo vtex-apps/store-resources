@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "store-resources",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "VTEX Store Resources",
   "description": "Common VTEX Store Resources",
   "builders": {
@@ -17,6 +17,5 @@
   "dependencies": {
     "vtex.store-graphql": "2.x"
   },
-  "settingsSchema": {
-  }
+  "settingsSchema": {}
 }
