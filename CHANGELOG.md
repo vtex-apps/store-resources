@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Add more queries and rename the `.gql` files.
+- Add OrderFormContext mutations.
 
 ## [0.1.2] - 2019-01-14
 ### Changed
