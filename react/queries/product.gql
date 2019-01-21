@@ -117,13 +117,39 @@ query Product($slug: String) {
           }
         }
       }
-      attachments {
+    }
+    itemMetadata {
+      items {
         id
         name
-        required
+        skuName
+        imageUrl
+        assemblyOptions {
+          id
+          name
+          composition {
+            minQuantity
+            maxQuantity
+            items {
+              id
+              minQuantity
+              maxQuantity
+              priceTable
+              seller
+            }
+          }
+        }
       }
-      calculatedAttachments
+      priceTable {
+        type
+        values {
+          id
+          price
+          priceTable
+        }
+      }
     }
+
     productClusters{
       id
       name
