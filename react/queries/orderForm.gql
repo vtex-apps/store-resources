@@ -17,6 +17,8 @@ query orderForm {
       quantity
       sellingPrice
       listPrice
+      parentItemIndex
+      parentAssemblyBinding
     }
     shippingData {
       address {
@@ -53,5 +55,28 @@ query orderForm {
       currencyCode
       timeZone
     }
+    itemMetadata {
+      items {
+        id
+        name
+        skuName
+        productId
+        refId
+        ean
+        imageUrl
+        detailUrl
+        assemblyOptions {
+          id
+          name
+          required
+          inputValues
+          composition {
+            minQuantity
+            maxQuantity
+          }
+        }
+      }
+    }
+
   }
 }
