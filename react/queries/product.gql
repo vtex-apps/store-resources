@@ -124,6 +124,7 @@ query Product($slug: String) {
         name
         skuName
         imageUrl
+        seller
         assemblyOptions {
           id
           name

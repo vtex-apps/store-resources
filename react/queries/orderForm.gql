@@ -73,6 +73,9 @@ query orderForm {
           composition {
             minQuantity
             maxQuantity
+            items {
+              maxQuantity
+            }
           }
         }
       }
