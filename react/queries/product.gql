@@ -146,7 +146,6 @@ query Product($slug: String) {
         values {
           id
           price
-          priceTable
         }
       }
     }
