@@ -137,6 +137,7 @@ query Product($slug: String) {
               maxQuantity
               priceTable
               seller
+              initialQuantity
             }
           }
         }
