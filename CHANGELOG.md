@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Add `description` of the product to search query.
 
+### Added
+- Added currencyFormatInfo to orderForm query
+- Added `addItem`, `updateItems`, and `updateOrderFormCheckin` mutations
+
 ## [0.3.0] - 2019-01-18
 ### Changed
 - Update React builder to 3.x. 
