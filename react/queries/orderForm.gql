@@ -54,6 +54,12 @@ query orderForm {
       countryCode
       currencyCode
       timeZone
+      currencyFormatInfo {
+        currencyDecimalDigits
+        currencyDecimalSeparator
+        currencyGroupSeparator
+        startsWithCurrencySymbol
+      }
     }
     itemMetadata {
       items {
