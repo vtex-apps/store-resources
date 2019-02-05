@@ -4,6 +4,25 @@ query Session {
     adminUserId
     impersonable
     adminUserEmail
+    address {
+      cacheId
+      id
+      addressId
+      userId
+      receiverName
+      complement
+      neighborhood
+      country
+      state
+      number
+      street
+      geoCoordinates
+      postalCode
+      city
+      reference
+      addressName
+      addressType
+    }
     profile {
       id
       firstName
