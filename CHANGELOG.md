@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.1] - 2019-02-05
+### Changed
+- Add `description` of the product to search query.
+
 ## [0.3.0] - 2019-01-18
 ### Changed
 - Update React builder to 3.x. 

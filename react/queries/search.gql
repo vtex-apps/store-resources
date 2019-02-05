@@ -50,6 +50,7 @@ query search($query: String, $map: String, $rest: String, $orderBy: String, $pri
       cacheId
       categories
       productId
+      description
       productName
       linkText
       brand
