@@ -123,7 +123,8 @@ query Product($slug: String) {
         required
       }
       calculatedAttachments
-      itemMetadata {
+    }
+    itemMetadata {
         items {
           id
           name
@@ -154,7 +155,6 @@ query Product($slug: String) {
           }
         }
       }
-    }
     productClusters{
       id
       name
