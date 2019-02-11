@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.0] - 2019-02-11
+### Added
+- Add assembly options fields to product and orderForm query.
+
 ## [0.3.1] - 2019-02-05
 ### Changed
 - Add `description` of the product to search query.
