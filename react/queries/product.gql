@@ -123,6 +123,37 @@ query Product($slug: String) {
         required
       }
       calculatedAttachments
+      itemMetadata {
+        items {
+          id
+          name
+          imageUrl
+          seller
+          assemblyOptions {
+            id
+            name
+            composition {
+              minQuantity
+              maxQuantity
+              items {
+                id
+                minQuantity
+                maxQuantity
+                priceTable
+                seller
+                initialQuantity
+              }
+            }
+          }
+        }
+        priceTable {
+          type
+          values {
+            id
+            price
+          }
+        }
+      }
     }
     productClusters{
       id
