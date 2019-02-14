@@ -1,5 +1,85 @@
 mutation updateItems($orderFormId: String, $items: [OrderFormItemInput]) {
   updateItems(orderFormId: $orderFormId, items: $items) {
+    cacheId
     orderFormId
+    value
+    totalizers {
+      id
+      name
+      value
+    }
+    items {
+      id
+      name
+      imageUrl
+      detailUrl
+      skuName
+      quantity
+      sellingPrice
+      listPrice
+      parentItemIndex
+      parentAssemblyBinding
+    }
+    shippingData {
+      address {
+        id
+        neighborhood
+        complement
+        number
+        street
+        postalCode
+        city
+        reference
+        addressName
+        addressType
+      }
+      availableAddresses {
+        id
+        neighborhood
+        complement
+        number
+        street
+        postalCode
+        city
+        reference
+        addressName
+        addressType
+      }
+    }
+    clientProfileData {
+      email
+      firstName
+    }
+    storePreferencesData {
+      countryCode
+      currencyCode
+      timeZone
+    }
+    itemMetadata {
+      items {
+        id
+        name
+        skuName
+        productId
+        refId
+        ean
+        imageUrl
+        detailUrl
+        assemblyOptions {
+          id
+          name
+          required
+          composition {
+            minQuantity
+            maxQuantity
+            items {
+              maxQuantity
+              initialQuantity
+              id
+            }
+          }
+        }
+      }
+    }
   }
 }
