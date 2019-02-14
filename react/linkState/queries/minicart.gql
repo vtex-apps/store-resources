@@ -1,0 +1,18 @@
+query minicart {
+  minicart @client {
+    items {
+      id
+      name
+      imageUrl
+      detailUrl
+      skuName
+      quantity
+      sellingPrice
+      listPrice
+      seller
+      index
+      parentItemIndex
+      parentAssemblyBinding
+    }
+  }
+}
