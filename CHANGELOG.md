@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Add update order form checkin mutation
+- Add update order form checkin mutation.
 
 ## [0.5.0] - 2019-02-27
 ### Added
