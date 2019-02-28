@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.5.1] - 2019-02-28
+### Added
+- Add update order form checkin mutation.
+
 ## [0.5.0] - 2019-02-27
 ### Added
 - Add assembly options resolvers on OrderForm query
