@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Return the full `orderForm` from the items mutations.
 
 ### Changed
-- Delete the `orderFormConsumer`.
+- Removed the `orderFormConsumer`.
 
 ## [0.5.1] - 2019-02-28
 ### Added
