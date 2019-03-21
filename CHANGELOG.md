@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.6.0] - 2019-03-21
+### Added
+- Return the full `orderForm` from the items mutations.
+
 ## [0.5.1] - 2019-02-28
 ### Added
 - Add update order form checkin mutation.
