@@ -37,6 +37,7 @@ query orderForm {
         }
         parentPrice
       }
+      seller
     }
     shippingData {
       address {
