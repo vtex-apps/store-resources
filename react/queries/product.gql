@@ -15,6 +15,13 @@ query Product($slug: String) {
       name
       values
     }
+    specificationGroups {
+      name
+      specifications {
+        name
+        values
+      }
+    }
     generalProperties {
       name
       values
