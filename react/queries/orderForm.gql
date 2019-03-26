@@ -51,6 +51,10 @@ query orderForm {
         reference
         addressName
         addressType
+        geoCoordinates
+        state
+        receiverName
+        country
       }
       availableAddresses {
         id
@@ -63,6 +67,10 @@ query orderForm {
         reference
         addressName
         addressType
+        geoCoordinates
+        state
+        receiverName
+        country
       }
     }
     clientProfileData {
