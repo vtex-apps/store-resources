@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Add `generalProperties` in `product` query.
+- Add `specificationGroups ` in `product` query.
 
 ## [0.6.0] - 2019-03-21
 ### Added

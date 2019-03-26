@@ -15,6 +15,7 @@ query Product($slug: String) {
       name
       values
     }
+<<<<<<< HEAD
     specificationGroups {
       name
       specifications {
@@ -26,6 +27,8 @@ query Product($slug: String) {
       name
       values
     }
+=======
+>>>>>>> Update docs
     items {
       itemId
       name
