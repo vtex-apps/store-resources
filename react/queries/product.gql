@@ -56,6 +56,12 @@ query Product($slug: String) {
               Name
           }
         }
+        fixedPrices {
+            taggedPrice
+          	price
+            listPrice
+            quantity
+        }
       }
       variations {
         name
