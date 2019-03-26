@@ -15,7 +15,6 @@ query Product($slug: String) {
       name
       values
     }
-<<<<<<< HEAD
     specificationGroups {
       name
       specifications {
@@ -23,12 +22,6 @@ query Product($slug: String) {
         values
       }
     }
-    generalProperties {
-      name
-      values
-    }
-=======
->>>>>>> Update docs
     items {
       itemId
       name
@@ -41,7 +34,7 @@ query Product($slug: String) {
       }
       measurementUnit
       unitMultiplier
-      images (quantity: 10) {
+      images(quantity: 10) {
         imageId
         imageLabel
         imageTag
@@ -63,11 +56,11 @@ query Product($slug: String) {
           Tax
           CacheVersionUsedToCallCheckout
           Installments {
-              Value
-              InterestRate
-              TotalValuePlusInterestRate
-              NumberOfInstallments
-              Name
+            Value
+            InterestRate
+            TotalValuePlusInterestRate
+            NumberOfInstallments
+            Name
           }
         }
       }
@@ -81,16 +74,16 @@ query Product($slug: String) {
         product {
           productName
           productId
-    			description
-    			linkText
-    			categories
-    			categoryId
-    			categoriesIds
-    			brand
-    			properties {
-      			name
-      			values
-    			}
+          description
+          linkText
+          categories
+          categoryId
+          categoriesIds
+          brand
+          properties {
+            name
+            values
+          }
         }
         sku {
           itemId
@@ -121,11 +114,11 @@ query Product($slug: String) {
               Tax
               CacheVersionUsedToCallCheckout
               Installments {
-                  Value
-                  InterestRate
-                  TotalValuePlusInterestRate
-                  NumberOfInstallments
-                  Name
+                Value
+                InterestRate
+                TotalValuePlusInterestRate
+                NumberOfInstallments
+                Name
               }
             }
           }
@@ -139,41 +132,41 @@ query Product($slug: String) {
       calculatedAttachments
     }
     itemMetadata {
-        items {
+      items {
+        id
+        name
+        imageUrl
+        seller
+        assemblyOptions {
           id
           name
-          imageUrl
-          seller
-          assemblyOptions {
-            id
-            name
-            composition {
+          composition {
+            minQuantity
+            maxQuantity
+            items {
+              id
               minQuantity
               maxQuantity
-              items {
-                id
-                minQuantity
-                maxQuantity
-                priceTable
-                seller
-                initialQuantity
-              }
+              priceTable
+              seller
+              initialQuantity
             }
           }
         }
-        priceTable {
-          type
-          values {
-            id
-            price
-          }
+      }
+      priceTable {
+        type
+        values {
+          id
+          price
         }
       }
-    productClusters{
+    }
+    productClusters {
       id
       name
     }
-    clusterHighlights{
+    clusterHighlights {
       id
       name
     }
