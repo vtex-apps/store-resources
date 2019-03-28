@@ -82,31 +82,5 @@ query orderForm {
       currencyCode
       timeZone
     }
-    itemMetadata {
-      items {
-        id
-        name
-        skuName
-        productId
-        refId
-        ean
-        imageUrl
-        detailUrl
-        assemblyOptions {
-          id
-          name
-          required
-          composition {
-            minQuantity
-            maxQuantity
-            items {
-              maxQuantity
-              initialQuantity
-              id
-            }
-          }
-        }
-      }
-    }
   }
 }
