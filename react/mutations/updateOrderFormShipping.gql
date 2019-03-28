@@ -37,22 +37,6 @@ mutation updateOrderFormShipping(
         receiverName
         country
       }
-      selectedAddresses {
-        id
-        street
-        number
-        receiverName
-        complement
-        neighborhood
-        country
-        state
-        geoCoordinates
-        postalCode
-        city
-        reference
-        addressName
-        addressType
-      }
     }
   }
 }
