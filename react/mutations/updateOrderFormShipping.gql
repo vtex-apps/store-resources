@@ -5,21 +5,37 @@ mutation updateOrderFormShipping(
   updateOrderFormShipping(orderFormId: $orderFormId, address: $address) {
     orderFormId
     shippingData {
-      selectedAddresses {
+      address {
         id
-        street
-        number
-        receiverName
-        complement
         neighborhood
-        country
-        state
-        geoCoordinates
+        complement
+        number
+        street
         postalCode
         city
         reference
         addressName
         addressType
+        geoCoordinates
+        state
+        receiverName
+        country
+      }
+      availableAddresses {
+        id
+        neighborhood
+        complement
+        number
+        street
+        postalCode
+        city
+        reference
+        addressName
+        addressType
+        geoCoordinates
+        state
+        receiverName
+        country
       }
     }
   }
