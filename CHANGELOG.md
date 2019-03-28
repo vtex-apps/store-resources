@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.6.3] - 2019-03-28
+### Changed
+- Removed unused `itemMetadata` fields from orderForm queries/mutations.
+
 ## [0.6.2] - 2019-03-28
 ### Fixed
 - Make updateOrderFormShipping output.
