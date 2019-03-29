@@ -82,5 +82,7 @@ query orderForm {
       currencyCode
       timeZone
     }
+    checkedInPickupPointId
+    isCheckedIn
   }
 }
