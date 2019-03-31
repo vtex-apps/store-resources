@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.7.0] - 2019-03-31
+### Added
+- Add `discountHighlights` field in search and product queries. 
+
 ## [0.6.3] - 2019-03-28
 ### Changed
 - Removed unused `itemMetadata` fields from orderForm queries/mutations.
