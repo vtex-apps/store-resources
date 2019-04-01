@@ -20,6 +20,7 @@ mutation addItem($orderFormId: String, $items: [OrderFormItemInput]) {
       parentItemIndex
       parentAssemblyBinding
       seller
+      cartIndex
       assemblyOptions {
         added {
           item {
