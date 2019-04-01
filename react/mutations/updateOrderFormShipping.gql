@@ -4,6 +4,8 @@ mutation updateOrderFormShipping(
 ) {
   updateOrderFormShipping(orderFormId: $orderFormId, address: $address) {
     orderFormId
+    isCheckedIn
+    checkedInPickupPointId
     shippingData {
       address {
         id
