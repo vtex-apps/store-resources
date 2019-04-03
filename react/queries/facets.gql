@@ -1,0 +1,58 @@
+query facets($query: String, $map: String) {
+  facets(query: $query, map: $map) {
+    Departments {
+      Quantity
+      Name
+      Link
+      Slug
+      selected
+    }
+    Brands {
+      Quantity
+      Name
+      Link
+      Slug
+      selected
+    }
+    SpecificationFilters {
+      name
+      facets {
+        Quantity
+        Name
+        Link
+        Slug
+        selected
+      }
+    }
+    CategoriesTrees {
+      Id
+      Quantity
+      Name
+      Link
+      Slug
+      selected
+      Children {
+        Id
+        Quantity
+        Name
+        Link
+        Slug
+        selected
+        Children {
+          Id
+          Quantity
+          Name
+          Link
+          Slug
+          selected
+        }
+      }
+    }
+    PriceRanges {
+      Quantity
+      Name
+      Link
+      Slug
+    }
+  }
+}
