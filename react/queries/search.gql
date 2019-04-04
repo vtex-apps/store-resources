@@ -110,5 +110,6 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       slug
       map
     }
+    recordsFiltered
   }
 }
