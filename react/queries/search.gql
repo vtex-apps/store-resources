@@ -54,6 +54,7 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       Name
       Link
       Slug
+      map
       selected
     }
     Brands {
@@ -61,6 +62,7 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       Name
       Link
       Slug
+      map
       selected
     }
     SpecificationFilters {
@@ -70,6 +72,7 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
         Name
         Link
         Slug
+        map
         selected
       }
     }
@@ -79,6 +82,7 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       Name
       Link
       Slug
+      map
       selected
       Children {
         Id
@@ -86,6 +90,7 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
         Name
         Link
         Slug
+        map
         selected
         Children {
           Id
@@ -93,6 +98,7 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
           Name
           Link
           Slug
+          map
           selected
         }
       }
@@ -102,6 +108,7 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       Name
       Link
       Slug
+      map
     }
   }
 }
