@@ -49,6 +49,55 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
     }
   }
   facets(query: $query, map: $map) @include (if: $withFacets) {
+    # Backwards compatibility with search-result v3
+    Departments {
+      Quantity
+      Name
+      Link
+      Slug
+    }
+    Brands {
+      Quantity
+      Name
+      Link
+      Slug
+    }
+    SpecificationFilters {
+      Name
+      Facets {
+        Quantity
+        Name
+        Link
+        Slug
+      }
+    }
+    CategoriesTrees {
+      Id
+      Quantity
+      Name
+      Link
+      Slug
+      Children {
+        Id
+        Quantity
+        Name
+        Link
+        Slug
+        Children {
+          Id
+          Quantity
+          Name
+          Link
+          Slug
+        }
+      }
+    }
+    PriceRanges {
+      Quantity
+      Name
+      Link
+      Slug
+    }
     departments {
       quantity
       name
