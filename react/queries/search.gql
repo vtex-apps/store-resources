@@ -54,21 +54,18 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       Quantity
       Name
       Link
-      Slug
     }
     Brands {
       Quantity
       Name
       Link
-      Slug
     }
     SpecificationFilters {
-      Name
-      Facets {
+      name
+      facets {
         Quantity
         Name
         Link
-        Slug
       }
     }
     CategoriesTrees {
@@ -76,19 +73,16 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       Quantity
       Name
       Link
-      Slug
       Children {
         Id
         Quantity
         Name
         Link
-        Slug
         Children {
           Id
           Quantity
           Name
           Link
-          Slug
         }
       }
     }
