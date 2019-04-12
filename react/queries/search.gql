@@ -53,17 +53,17 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       quantity
       name
       link
-      slug
       map
       selected
+      value
     }
     brands {
       quantity
       name
       link
-      slug
       map
       selected
+      value
     }
     specificationFilters {
       name
@@ -71,9 +71,9 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
         quantity
         name
         link
-        slug
         map
         selected
+        value
       }
     }
     categoriesTrees {
@@ -81,25 +81,25 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
       quantity
       name
       link
-      slug
       map
       selected
+      value
       children {
         id
         quantity
         name
         link
-        slug
         map
         selected
+        value
         children {
           id
           quantity
           name
           link
-          slug
           map
           selected
+          value
         }
       }
     }
