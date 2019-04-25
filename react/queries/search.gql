@@ -1,148 +1,27 @@
-query search($query: String, $map: String, $orderBy: String, $priceRange: String, $from: Int, $to: Int, $withFacets: Boolean = true) {
-  products(query: $query, map: $map, orderBy: $orderBy, priceRange: $priceRange, from: $from, to: $to) {
-    cacheId
-    categories
-    productId
-    description
-    productName
-    linkText
-    brand
-    link
-    items {
-      itemId
-      name
-      nameComplete
-      complementName
-      ean
-      referenceId {
-        Key
-        Value
-      }
-      measurementUnit
-      unitMultiplier
-      images {
-        cacheId
-        imageId
-        imageLabel
-        imageTag
-        imageUrl
-        imageText
-      }
-      sellers {
-        sellerId
-        sellerName
-        commertialOffer {
-          discountHighlights {
-            name
-          }
-          Price
-          ListPrice
-          PriceWithoutDiscount
-          RewardValue
-          PriceValidUntil
-          AvailableQuantity
-        }
-      }
-    }
-    productClusters {
-      name
-    }
-  }
-  facets(query: $query, map: $map) @include (if: $withFacets) {
-    departments {
-      quantity
-      name
-      link
-      linkEncoded
-      map
-      selected
-      value
-    }
-    brands {
-      quantity
-      name
-      link
-      linkEncoded
-      map
-      selected
-      value
-    }
-    specificationFilters {
-      name
-      facets {
-        quantity
-        name
-        link
-        linkEncoded
-        map
-        selected
-        value
-      }
-    }
-    categoriesTrees {
-      id
-      quantity
-      name
-      link
-      linkEncoded
-      map
-      selected
-      value
-      children {
-        id
-        quantity
-        name
-        link
-        linkEncoded
-        map
-        selected
-        value
-        children {
-          id
-          quantity
-          name
-          link
-          linkEncoded
-          map
-          selected
-          value
-        }
-      }
-    }
-    priceRanges {
-      quantity
-      name
-      link
-      linkEncoded
-      slug
-      map
-    }
-    recordsFiltered
-    # Backwards compatibility with search-result v3
-    Departments {
-      Quantity
-      Name
-      Link
-    }
-    Brands {
-      Quantity
-      Name
-      Link
-    }
-    SpecificationFilters {
-      name
-      facets {
+query search($query: String, $map: String, $rest: String, $orderBy: String, $priceRange: String, $from: Int, $to: Int, $withFacets: Boolean = true) {
+  search(query: $query, map: $map, rest: $rest, orderBy: $orderBy, priceRange: $priceRange, from: $from, to: $to) {
+    titleTag
+    metaTagDescription
+    facets @include (if: $withFacets) {
+      Departments {
         Quantity
         Name
         Link
       }
-    }
-    CategoriesTrees {
-      Id
-      Quantity
-      Name
-      Link
-      Children {
+      Brands {
+        Quantity
+        Name
+        Link
+      }
+      SpecificationFilters {
+        name
+        facets {
+          Quantity
+          Name
+          Link
+        }
+      }
+      CategoriesTrees {
         Id
         Quantity
         Name
@@ -152,14 +31,70 @@ query search($query: String, $map: String, $orderBy: String, $priceRange: String
           Quantity
           Name
           Link
+          Children {
+            Id
+            Quantity
+            Name
+            Link
+          }
         }
       }
+      PriceRanges {
+        Quantity
+        Name
+        Link
+        Slug
+      }
     }
-    PriceRanges {
-      Quantity
-      Name
-      Link
-      Slug
+    products {
+      cacheId
+      categories
+      productId
+      description
+      productName
+      linkText
+      brand
+      link
+      items {
+        itemId
+        name
+        nameComplete
+        complementName
+        ean
+        referenceId {
+          Key
+          Value
+        }
+        measurementUnit
+        unitMultiplier
+        images {
+          cacheId
+          imageId
+          imageLabel
+          imageTag
+          imageUrl
+          imageText
+        }
+        sellers {
+          sellerId
+          sellerName
+          commertialOffer {
+            discountHighlights {
+              name
+            }
+            Price
+            ListPrice
+            PriceWithoutDiscount
+            RewardValue
+            PriceValidUntil
+            AvailableQuantity
+          }
+        }
+      }
+      productClusters {
+        name
+      }
     }
+    recordsFiltered
   }
 }
