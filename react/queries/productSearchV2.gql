@@ -1,15 +1,24 @@
 query search(
-  $query: String,
-  $map: String,
-  $facetQuery: String,
-  $facetMap: String,
-  $orderBy: String,
-  $priceRange: String,
-  $from: Int,
-  $to: Int,
+  $query: String
+  $map: String
+  $facetQuery: String
+  $facetMap: String
+  $orderBy: String
+  $priceRange: String
+  $from: Int
+  $to: Int
   $withFacets: Boolean = true
 ) {
-  productSearch(query: $query, map: $map, orderBy: $orderBy, priceRange: $priceRange, from: $from, to: $to) {
+  productSearch(
+    query: $query
+    map: $map
+    orderBy: $orderBy
+    priceRange: $priceRange
+    from: $from
+    to: $to
+  ) {
+    titleTag
+    metaTagDescription
     products {
       cacheId
       categories
@@ -61,7 +70,7 @@ query search(
     }
     recordsFiltered
   }
-  facets(query: $facetQuery, map: $facetMap) @include (if: $withFacets) {
+  facets(query: $facetQuery, map: $facetMap) @include(if: $withFacets) {
     departments {
       quantity
       name
