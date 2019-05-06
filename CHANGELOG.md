@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Use new paramenter filterUnavailableBySegment on product search v2.
+- Use new paramenter `hieUnavailableItems` on product search v2.
 
 ## [0.10.0] - 2019-05-01
 ### Added
