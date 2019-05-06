@@ -8,7 +8,7 @@ query search(
   $from: Int
   $to: Int
   $withFacets: Boolean = true
-  $hideUnavailableItems: Boolean
+  $hideUnavailableItems: Boolean = false
 ) {
   productSearch(
     query: $query
