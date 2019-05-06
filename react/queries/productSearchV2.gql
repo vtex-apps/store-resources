@@ -8,6 +8,7 @@ query search(
   $from: Int
   $to: Int
   $withFacets: Boolean = true
+  $hideUnavailableItems: Boolean = false
 ) {
   productSearch(
     query: $query
@@ -16,6 +17,7 @@ query search(
     priceRange: $priceRange
     from: $from
     to: $to
+    hideUnavailableItems: $hideUnavailableItems
   ) {
     titleTag
     metaTagDescription
