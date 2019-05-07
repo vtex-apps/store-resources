@@ -12,6 +12,10 @@ query search(
   products(query: $query, map: $map, orderBy: $orderBy, priceRange: $priceRange, from: $from, to: $to) {
     cacheId
     categories
+    categoryTree {
+      name
+      href
+    }
     productId
     description
     productName

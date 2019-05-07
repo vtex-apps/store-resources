@@ -6,6 +6,10 @@ fragment product on Product {
   titleTag
   metaTagDescription
   categories
+  categoryTree {
+    name
+    href
+  }
   items {
     itemId
     name

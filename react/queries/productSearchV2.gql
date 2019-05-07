@@ -24,6 +24,10 @@ query search(
     products {
       cacheId
       categories
+      categoryTree {
+        name
+        href
+      }
       productId
       description
       productName

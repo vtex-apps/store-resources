@@ -10,6 +10,11 @@ query Product($slug: String) {
     categories
     categoryId
     categoriesIds
+    categoryTree {
+      id
+      name
+      href
+    }
     brand
     properties {
       name
@@ -80,6 +85,11 @@ query Product($slug: String) {
           description
           linkText
           categories
+          categoryTree {
+            id
+            name
+            href
+          }
           categoryId
           categoriesIds
           brand

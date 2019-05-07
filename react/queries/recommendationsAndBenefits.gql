@@ -8,6 +8,10 @@ query RecommendationsAndBenefits ($slug: String) {
         productName
         description
         categories
+        categoryTree {
+          name
+          href
+        }
         link
         linkText
         brand
@@ -55,6 +59,10 @@ query RecommendationsAndBenefits ($slug: String) {
         productName
         description
         categories
+        categoryTree {
+          name
+          href
+        }
         link
         linkText
         brand
@@ -102,6 +110,10 @@ query RecommendationsAndBenefits ($slug: String) {
         productName
         description
         categories
+        categoryTree {
+          name
+          href
+        }
         link
         linkText
         brand
@@ -158,6 +170,11 @@ query RecommendationsAndBenefits ($slug: String) {
           categories
           categoryId
           categoriesIds
+          categoryTree {
+            id
+            name
+            href
+          }
           brand
           properties {
             name,
