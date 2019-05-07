@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.11.0] - 2019-05-07
+
 ## [0.10.1] - 2019-05-06
 ### Added
 - Use new paramenter `hieUnavailableItems` on product search v2.
