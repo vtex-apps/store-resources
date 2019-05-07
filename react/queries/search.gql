@@ -26,16 +26,22 @@ query search($query: String, $map: String, $rest: String, $orderBy: String, $pri
         Quantity
         Name
         Link
+        href
+        name
         Children {
           Id
           Quantity
           Name
           Link
+          href
+          name
           Children {
             Id
             Quantity
             Name
             Link
+            href
+            name
           }
         }
       }

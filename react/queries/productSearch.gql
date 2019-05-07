@@ -98,6 +98,7 @@ query search(
       quantity
       name
       link
+      href
       linkEncoded
       map
       selected
@@ -107,6 +108,7 @@ query search(
         quantity
         name
         link
+        href
         linkEncoded
         map
         selected
@@ -116,6 +118,7 @@ query search(
           quantity
           name
           link
+          href
           linkEncoded
           map
           selected
@@ -156,16 +159,22 @@ query search(
       Quantity
       Name
       Link
+      href
+      name
       Children {
         Id
         Quantity
         Name
         Link
+        href
+        name
         Children {
           Id
           Quantity
           Name
           Link
+          href
+          name
         }
       }
     }
