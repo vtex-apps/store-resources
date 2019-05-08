@@ -71,6 +71,7 @@ query search(
         }
       }
       productClusters {
+        id
         name
       }
     }
