@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.11.1] - 2019-05-10
+### Added
+- Queries product cluster id.
+
 ## [0.11.0] - 2019-05-07
 
 ## [0.10.1] - 2019-05-06
