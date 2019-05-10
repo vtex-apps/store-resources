@@ -19,7 +19,7 @@ const PWAProvider = ({ settings, children }) => {
       if (promptOnCustomEvent && !captured.current) {
         e.preventDefault()
         deferredPrompt.current = e
-        captured.current = false
+        captured.current = true
         return false
       }
       return true
