@@ -4,22 +4,22 @@ import React, {
   useEffect,
   useMemo,
   useRef,
-  useState,
 } from 'react'
 
 const PWAContext = React.createContext(null)
 
 const PWAProvider = ({ settings, children }) => {
   const deferredPrompt = useRef(null)
-  /* beforeinstallprompt event is fired even after the userChoice is to cancel */
-  const [captured, setCaptured] = useState(false)
+  /* beforeinstallprompt event is fired even after the userChoice is to cancel (and there is no need to re-render) */
+  const captured = useRef(false)
+
   useEffect(() => {
     const handleBeforeInstall = e => {
       const { promptOnCustomEvent } = settings
-      if (promptOnCustomEvent && !captured) {
+      if (promptOnCustomEvent && !captured.current) {
         e.preventDefault()
         deferredPrompt.current = e
-        setCaptured(true)
+        captured.current = false
         return false
       }
       return true
