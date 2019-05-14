@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.12.1] - 2019-05-14
+### Fixed
+- Use `hideUnavailableItems` parameter on facets query.
+
 ## [0.12.0] - 2019-05-10
 ### Added
 - `PWAContext` and `usePWA` to allow apps to control, for now, the install prompt (Add to Home Screen).
