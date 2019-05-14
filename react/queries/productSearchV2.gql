@@ -77,7 +77,7 @@ query search(
     }
     recordsFiltered
   }
-  facets(query: $facetQuery, map: $facetMap) @include(if: $withFacets) {
+  facets(query: $facetQuery, map: $facetMap, hideUnavailableItems: $hideUnavailableItems) @include(if: $withFacets) {
     departments {
       quantity
       name
