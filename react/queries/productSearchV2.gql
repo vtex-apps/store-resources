@@ -76,6 +76,10 @@ query search(
       }
     }
     recordsFiltered
+    breadcrumb {
+      name
+      href
+    }
   }
   facets(query: $facetQuery, map: $facetMap, hideUnavailableItems: $hideUnavailableItems) @include(if: $withFacets) {
     departments {
