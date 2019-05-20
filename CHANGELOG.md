@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.12.2] - 2019-05-20
+### Added
+- Fetch breadcrumb params in productSearch query.  
+
 ## [0.12.1] - 2019-05-14
 ### Fixed
 - Use `hideUnavailableItems` parameter on facets query.
