@@ -1,0 +1,82 @@
+query ProductBenefits ($slug: String) {
+  product(slug: $slug) {
+    cacheId
+    benefits {
+      featured
+      id
+      name
+      items {
+        benefitProduct {
+          cacheId
+          productName
+          productId
+          description
+          linkText
+          categories
+          categoryId
+          categoriesIds
+          categoryTree {
+            id
+            name
+            href
+          }
+          brand
+          properties {
+            name,
+            values
+          },
+          items {
+            itemId
+            name
+            nameComplete
+            complementName
+            ean
+            referenceId {
+              Key
+              Value
+            }
+            measurementUnit
+            unitMultiplier
+            images {
+              imageId
+              imageLabel
+              imageTag
+              imageUrl
+              imageText
+            }
+            sellers {
+              sellerId
+              sellerName
+              addToCartLink
+              sellerDefault
+              commertialOffer {
+                Price
+                ListPrice
+                PriceWithoutDiscount
+                RewardValue
+                PriceValidUntil
+                AvailableQuantity
+                Tax
+                CacheVersionUsedToCallCheckout
+                Installments {
+                    Value
+                    InterestRate
+                    TotalValuePlusInterestRate
+                    NumberOfInstallments
+                    Name
+                }
+              }
+            }
+            variations {
+              name
+            }
+          }
+        }
+        discount
+        minQuantity
+        benefitSKUIds
+      }
+      teaserType
+    }
+  }
+}

@@ -6,6 +6,7 @@ import search from './queries/search.gql'
 import productSearch from './queries/productSearch.gql'
 import productSearchV2 from './queries/productSearchV2.gql'
 import session from './queries/session.gql'
+import productBenefits from './queries/productBenefits.gql'
 
 export default {
   orderForm,
@@ -16,4 +17,5 @@ export default {
   recommendationsAndBenefits,
   search,
   session,
+  productBenefits,
 }
