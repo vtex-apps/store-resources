@@ -1,3 +1,4 @@
+# File deprecated. To be removed in next major!
 query RecommendationsAndBenefits ($slug: String) {
   product(slug: $slug) {
     cacheId

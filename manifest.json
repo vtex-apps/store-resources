@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "store-resources",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "title": "VTEX Store Resources",
   "description": "Common VTEX Store Resources",
   "builders": {
@@ -12,5 +12,6 @@
   },
   "dependencies": {
     "vtex.store-graphql": "2.x"
-  }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
