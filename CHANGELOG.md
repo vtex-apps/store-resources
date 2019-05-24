@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - `productBenefits` query.
 
+### Changed
+
+- Add warning of removal in next major to `recommendationAndBenefits` file.
+
 ## [0.12.2] - 2019-05-20
 ### Added
 - Fetch breadcrumb params in productSearch query.  
