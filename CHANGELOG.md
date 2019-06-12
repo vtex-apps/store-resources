@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Field `productReference` to `product` query.
+
 ## [0.12.3] - 2019-05-24
 ### Added
 
