@@ -82,7 +82,11 @@ query search(
       href
     }
   }
-  facets(query: $facetQuery, map: $facetMap, hideUnavailableItems: $hideUnavailableItems) @include(if: $withFacets) {
+  facets(
+    query: $facetQuery
+    map: $facetMap
+    hideUnavailableItems: $hideUnavailableItems
+  ) @include(if: $withFacets) {
     departments {
       quantity
       name
@@ -143,6 +147,28 @@ query search(
           map
           selected
           value
+          children {
+            id
+            quantity
+            name
+            link
+            href
+            linkEncoded
+            map
+            selected
+            value
+            children {
+              id
+              quantity
+              name
+              link
+              href
+              linkEncoded
+              map
+              selected
+              value
+            }
+          }
         }
       }
     }
