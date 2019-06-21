@@ -83,7 +83,6 @@ query Product($slug: String) {
         amount
         product {
           productName
-          productReference
           productId
           description
           linkText
