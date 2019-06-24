@@ -17,6 +17,7 @@ query Product($slug: String) {
       href
     }
     brand
+    brandId
     properties {
       name
       values
