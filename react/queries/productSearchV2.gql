@@ -62,6 +62,13 @@ query search(
             discountHighlights {
               name
             }
+            Installments {
+              Value
+              InterestRate
+              TotalValuePlusInterestRate
+              NumberOfInstallments
+              Name
+            }
             Price
             ListPrice
             PriceWithoutDiscount
