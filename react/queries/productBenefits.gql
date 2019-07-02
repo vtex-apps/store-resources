@@ -1,5 +1,5 @@
-query ProductBenefits ($slug: String) {
-  product(slug: $slug) {
+query ProductBenefits ($slug: String, $identifier: ProductUniqueIdentifier) {
+  product(slug: $slug, identifier: $identifier) {
     cacheId
     benefits {
       featured
