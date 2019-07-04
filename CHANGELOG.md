@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added `Teasers` and `Discount` field in `Product` and `ProductSearchV2` queries.
 
+## [0.15.0] - 2019-07-02
+### Added
+- `ProductUniqueIdentifier` parameter to product query
+
+## [0.14.4] - 2019-06-28
+### Fixed
+- Return `Installments` for `search-result`.
+
+## [0.14.3] - 2019-06-27
+
+### Fixed
+- Build assets with new builder hub.
+
 ## [0.14.2] - 2019-06-24
 ### Added
 - `brandId` to `Product` query.

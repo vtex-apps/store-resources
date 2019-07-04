@@ -1,5 +1,5 @@
-query Product($slug: String) {
-  product(slug: $slug) {
+query Product($slug: String, $identifier: ProductUniqueIdentifier) {
+  product(slug: $slug, identifier: $identifier) {
     cacheId
     productName
     productId

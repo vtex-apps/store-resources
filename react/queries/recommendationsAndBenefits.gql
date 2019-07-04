@@ -1,6 +1,6 @@
 # File deprecated. To be removed in next major!
-query RecommendationsAndBenefits ($slug: String) {
-  product(slug: $slug) {
+query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdentifier) {
+  product(slug: $slug, identifier: $identifier) {
     cacheId
     recommendations {
       view {

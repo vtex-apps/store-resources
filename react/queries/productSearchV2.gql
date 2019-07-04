@@ -65,6 +65,13 @@ query search(
             teasers {
               name
             }
+            Installments {
+              Value
+              InterestRate
+              TotalValuePlusInterestRate
+              NumberOfInstallments
+              Name
+            }
             Price
             ListPrice
             PriceWithoutDiscount
