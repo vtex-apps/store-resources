@@ -62,6 +62,9 @@ query search(
             discountHighlights {
               name
             }
+            teasers {
+              name
+            }
             Price
             ListPrice
             PriceWithoutDiscount
