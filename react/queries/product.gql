@@ -57,6 +57,9 @@ query Product($slug: String, $identifier: ProductUniqueIdentifier) {
           discountHighlights {
             name
           }
+          teasers {
+            name
+          }
           Price
           ListPrice
           PriceWithoutDiscount
