@@ -85,6 +85,10 @@ query search(
         id
         name
       }
+      properties {
+        name
+        values
+      }
     }
     recordsFiltered
     breadcrumb {
