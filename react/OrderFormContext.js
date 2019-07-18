@@ -61,6 +61,16 @@ const contextPropTypes = PropTypes.shape({
     /* Items in the mini cart */
 
     items: PropTypes.arrayOf(PropTypes.object),
+    /* CustomData in the OrderForm */
+
+    customData: PropTypes.shape({
+      customApps: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          fields: PropTypes.object
+        })
+      )
+    }),
     /* Shipping Address */
 
     shippingData: PropTypes.shape({
