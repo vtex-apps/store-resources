@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 - Added `CustomData` field in `OrderForm` query. 
 
+## [0.16.0] - 2019-07-10
+### Added
+- Added `adress` query.
+
+## [0.15.2] - 2019-07-10
+### Added
+- Added `properties` field in `ProductSearchV2` query.
+
 ## [0.15.1] - 2019-07-04
 ### Added
 - Added `Teasers` and `Discount` field in `Product` and `ProductSearchV2` queries.
