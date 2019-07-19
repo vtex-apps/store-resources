@@ -13,6 +13,12 @@ mutation addItem($orderFormId: String, $items: [OrderFormItemInput]) {
       name
       imageUrl
       detailUrl
+      productRefId
+      additionalInfo {
+        brandName
+      }
+      productCategoryIds
+      productCategories
       skuName
       quantity
       sellingPrice
