@@ -179,6 +179,7 @@ query Product($slug: String, $identifier: ProductUniqueIdentifier) {
         type
         values {
           id
+          assemblyId
           price
         }
       }
