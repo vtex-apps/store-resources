@@ -27,12 +27,33 @@ mutation updateItems($orderFormId: String, $items: [OrderFormItemInput]) {
       parentAssemblyBinding
       seller
       cartIndex
+      sellingPriceWithAssemblies
       assemblyOptions {
         added {
           item {
             name
             sellingPrice
             quantity
+            sellingPriceWithAssemblies
+            assemblyOptions {
+              added {
+                item {
+                  name
+                  sellingPrice
+                  quantity
+                  sellingPriceWithAssemblies
+                }
+                normalizedQuantity
+                choiceType
+                extraQuantity
+              }
+              removed {
+                removedQuantity
+                initialQuantity
+                name
+              }
+              parentPrice
+            }
           }
           normalizedQuantity
           choiceType

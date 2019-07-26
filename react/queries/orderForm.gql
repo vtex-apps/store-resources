@@ -32,12 +32,33 @@ query orderForm {
       parentItemIndex
       parentAssemblyBinding
       cartIndex
+      sellingPriceWithAssemblies
       assemblyOptions {
         added {
           item {
             name
             sellingPrice
             quantity
+            sellingPriceWithAssemblies
+            assemblyOptions {
+              added {
+                item {
+                  name
+                  sellingPrice
+                  quantity
+                  sellingPriceWithAssemblies
+                }
+                normalizedQuantity
+                choiceType
+                extraQuantity
+              }
+              removed {
+                removedQuantity
+                initialQuantity
+                name
+              }
+              parentPrice
+            }
           }
           normalizedQuantity
           choiceType
