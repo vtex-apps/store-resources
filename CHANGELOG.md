@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.19.1-beta] - 2019-07-30
+
 ## [0.19.0] - 2019-07-26
 ### Added
 - More fields on cart queries for assembly options.
