@@ -61,7 +61,7 @@ query search(
             teasers {
               name
             }
-            Installments {
+            Installments (criteria: MAX) {
               Value
               InterestRate
               TotalValuePlusInterestRate
