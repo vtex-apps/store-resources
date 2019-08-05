@@ -134,7 +134,7 @@ query Product($slug: String, $identifier: ProductUniqueIdentifier) {
               AvailableQuantity
               Tax
               CacheVersionUsedToCallCheckout
-              Installments {
+              Installments (criteria: MAX) {
                 Value
                 InterestRate
                 TotalValuePlusInterestRate

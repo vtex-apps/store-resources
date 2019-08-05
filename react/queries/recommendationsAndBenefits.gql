@@ -43,7 +43,7 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
               AvailableQuantity
               Tax
               CacheVersionUsedToCallCheckout
-              Installments {
+              Installments (criteria: MAX) {
                   Value
                   InterestRate
                   TotalValuePlusInterestRate
@@ -94,7 +94,7 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
               AvailableQuantity
               Tax
               CacheVersionUsedToCallCheckout
-              Installments {
+              Installments (criteria: MAX) {
                   Value
                   InterestRate
                   TotalValuePlusInterestRate
@@ -145,7 +145,7 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
               AvailableQuantity
               Tax
               CacheVersionUsedToCallCheckout
-              Installments {
+              Installments (criteria: MAX) {
                   Value
                   InterestRate
                   TotalValuePlusInterestRate
@@ -214,7 +214,7 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
                 AvailableQuantity
                 Tax
                 CacheVersionUsedToCallCheckout
-                Installments {
+                Installments (criteria: MAX) {
                     Value
                     InterestRate
                     TotalValuePlusInterestRate
