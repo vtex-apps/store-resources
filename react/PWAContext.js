@@ -15,8 +15,8 @@ const PWAProvider = ({ settings, children }) => {
 
   useEffect(() => {
     const handleBeforeInstall = e => {
-      const { promptOnCustomEvent } = settings
-      if (promptOnCustomEvent && !captured.current) {
+      const { addToHomeScreenPrompt } = settings
+      if (addToHomeScreenPrompt !== "default" && !captured.current) {
         e.preventDefault()
         deferredPrompt.current = e
         captured.current = true
@@ -40,7 +40,7 @@ const PWAProvider = ({ settings, children }) => {
     }
   }, [])
 
-  const context = useMemo(() => ({ showInstallPrompt }), [showInstallPrompt])
+  const context = useMemo(() => ({ showInstallPrompt, settings }), [showInstallPrompt, settings])
 
   return <PWAContext.Provider value={context}>{children}</PWAContext.Provider>
 }
