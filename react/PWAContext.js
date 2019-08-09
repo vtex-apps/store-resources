@@ -18,6 +18,10 @@ const PWAProvider = ({ settings, children }) => {
       const { addToHomeScreenPrompt } = settings
       if (addToHomeScreenPrompt !== "default" && !captured.current) {
         e.preventDefault()
+        
+        if(addToHomeScreenPrompt === "disable")
+          return false
+        
         deferredPrompt.current = e
         captured.current = true
         return false
