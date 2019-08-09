@@ -49,7 +49,7 @@ query Product($slug: String, $identifier: ProductUniqueIdentifier) {
         imageText
       }
       videos {
-        videoUri
+        videoUrl
       }
       sellers {
         sellerId
