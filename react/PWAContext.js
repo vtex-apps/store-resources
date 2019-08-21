@@ -19,7 +19,7 @@ const PWAProvider = ({ settings, children }) => {
       if (addToHomeScreenPrompt !== "default" && !captured.current) {
         e.preventDefault()
         
-        if(addToHomeScreenPrompt === "disable") {
+        if (addToHomeScreenPrompt === "disable") {
           return false
         }
 
