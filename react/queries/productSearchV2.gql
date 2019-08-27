@@ -30,6 +30,7 @@ query search(
       productReference
       linkText
       brand
+      brandId
       link
       items {
         itemId
