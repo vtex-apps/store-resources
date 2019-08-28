@@ -22,7 +22,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   useEffect(() => {
     const handleBeforeInstall = e => {
       const { promptOnCustomEvent, disablePrompt } = pwaSettings
-      if (promptOnCustomEvent !== "default" && !captured.current) {
+      if (promptOnCustomEvent !== 'default' && !captured.current) {
         e.preventDefault()
 
         if(disablePrompt) {
