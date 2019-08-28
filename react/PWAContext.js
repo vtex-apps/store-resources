@@ -6,7 +6,7 @@ import React, {
   useRef,
 } from 'react'
 import { Helmet } from 'vtex.render-runtime'
-import { graphql } from 'react-apollo';
+import { graphql } from 'react-apollo'
 
 import pwaData from './queries/pwaData.gql'
 
