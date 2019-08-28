@@ -1,0 +1,18 @@
+query pwaData {
+  pwaSettings {
+    promptOnCustomEvent
+  }
+  manifest {
+    theme_color
+  }
+  iOSIcons {
+    src
+    type
+    sizes
+  }
+  splashes {
+    src
+    type
+    sizes
+  }
+}

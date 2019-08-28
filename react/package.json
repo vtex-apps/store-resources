@@ -2,5 +2,8 @@
   "devDependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.3"
+  },
+  "dependencies": {
+    "react-apollo": "^2.5.8"
   }
 }
