@@ -1,4 +1,8 @@
-query Product($slug: String, $identifier: ProductUniqueIdentifier) {
+query Product(
+  $slug: String
+  $identifier: ProductUniqueIdentifier
+  $skipCategoryTree: Boolean = false
+) {
   product(slug: $slug, identifier: $identifier) {
     cacheId
     productName
@@ -11,7 +15,7 @@ query Product($slug: String, $identifier: ProductUniqueIdentifier) {
     categories
     categoryId
     categoriesIds
-    categoryTree {
+    categoryTree @skip(if: $skipCategoryTree) {
       id
       name
       href
@@ -137,7 +141,7 @@ query Product($slug: String, $identifier: ProductUniqueIdentifier) {
               AvailableQuantity
               Tax
               CacheVersionUsedToCallCheckout
-              Installments (criteria: MAX) {
+              Installments(criteria: MAX) {
                 Value
                 InterestRate
                 TotalValuePlusInterestRate

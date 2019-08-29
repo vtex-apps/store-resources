@@ -8,6 +8,7 @@ import productSearchV2 from './queries/productSearchV2.gql'
 import session from './queries/session.gql'
 import productBenefits from './queries/productBenefits.gql'
 import address from './queries/address.gql'
+import productCategoryTree from './queries/UNSTABLE__productCategoryTree.gql'
 
 export default {
   address,
@@ -20,4 +21,5 @@ export default {
   search,
   session,
   productBenefits,
+  UNSTABLE__productCategoryTree: productCategoryTree,
 }
