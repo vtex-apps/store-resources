@@ -57,7 +57,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
       return {
         showInstallPrompt,
         settings: {
-          promptOnCustomEvent: disablePrompt ? "" : promptOnCustomEvent
+          promptOnCustomEvent: disablePrompt ? '' : promptOnCustomEvent
         }
       }
     }
