@@ -21,9 +21,14 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
 
   useEffect(() => {
     const handleBeforeInstall = e => {
-      const { promptOnCustomEvent } = pwaSettings
-      if (promptOnCustomEvent && !captured.current) {
+      const { promptOnCustomEvent, disablePrompt } = pwaSettings
+      if (promptOnCustomEvent !== 'default' && !captured.current) {
         e.preventDefault()
+
+        if (disablePrompt) {
+          return false
+        }
+
         deferredPrompt.current = e
         captured.current = true
         return false
@@ -46,7 +51,18 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     }
   }, [])
 
-  const context = useMemo(() => ({ showInstallPrompt }), [showInstallPrompt])
+  const context = useMemo(() => {
+    if (pwaSettings) {
+      const { disablePrompt, promptOnCustomEvent } = pwaSettings
+      return {
+        showInstallPrompt,
+        settings: {
+          promptOnCustomEvent: disablePrompt ? '' : promptOnCustomEvent
+        }
+      }
+    }
+  }, [showInstallPrompt, pwaSettings])
+
   const hasManifest = !loading && manifest && !error
 
   return (
