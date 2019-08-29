@@ -1,6 +1,6 @@
 query pwaData {
   pwaSettings {
-    disablePrompt,
+    disablePrompt
     promptOnCustomEvent
   }
   manifest {
