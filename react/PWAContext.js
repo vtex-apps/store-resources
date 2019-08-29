@@ -52,7 +52,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   }, [])
 
   const context = useMemo(() => {
-    if(pwaSettings) {
+    if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
       return {
         showInstallPrompt,
