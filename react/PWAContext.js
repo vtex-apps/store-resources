@@ -25,7 +25,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
       if (promptOnCustomEvent !== 'default' && !captured.current) {
         e.preventDefault()
 
-        if(disablePrompt) {
+        if (disablePrompt) {
           return false
         }
 
