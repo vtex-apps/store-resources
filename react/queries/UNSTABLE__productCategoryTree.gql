@@ -1,0 +1,10 @@
+query ProductCategoryTree($slug: String, $identifier: ProductUniqueIdentifier) {
+  product(slug: $slug, identifier: $identifier) {
+    cacheId
+    categoryTree {
+      id
+      name
+      href
+    }
+  }
+}
