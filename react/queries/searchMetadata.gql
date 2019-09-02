@@ -1,0 +1,6 @@
+query SearchMetadata($query: String, $map: String) {
+  searchMetadata(query: $query, map: $map) {
+    titleTag
+    metaTagDescription
+  }
+}
