@@ -1,5 +1,6 @@
 query SearchMetadata($query: String, $map: String) {
-  searchMetadata(query: $query, map: $map) {
+  searchMetadata(query: $query, map: $map)
+    @context(provider: "vtex.search-graphql") {
     titleTag
     metaTagDescription
   }

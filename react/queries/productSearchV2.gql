@@ -18,12 +18,11 @@ query search(
     from: $from
     to: $to
     hideUnavailableItems: $hideUnavailableItems
-  ) {
+  ) @context(provider: "vtex.search-graphql") {
     titleTag
     metaTagDescription
     products {
       cacheId
-      categories
       productId
       description
       productName
@@ -62,7 +61,7 @@ query search(
             teasers {
               name
             }
-            Installments (criteria: MAX) {
+            Installments(criteria: MAX) {
               Value
               InterestRate
               TotalValuePlusInterestRate
@@ -97,7 +96,7 @@ query search(
     query: $facetQuery
     map: $facetMap
     hideUnavailableItems: $hideUnavailableItems
-  ) @include(if: $withFacets) {
+  ) @include(if: $withFacets) @context(provider: "vtex.search-graphql") {
     departments {
       quantity
       name
