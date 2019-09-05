@@ -31,6 +31,7 @@ query search(
       brand
       brandId
       link
+      categories
       items {
         itemId
         name
