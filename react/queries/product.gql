@@ -96,14 +96,13 @@ query Product(
           productId
           description
           linkText
-          # categories
+          categories
           categoryTree {
             id
             name
             href
           }
           categoryId
-          # categoriesIds
           brand
           properties {
             name
