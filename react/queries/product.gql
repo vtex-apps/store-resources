@@ -96,7 +96,6 @@ query Product(
           productId
           description
           linkText
-          categories
           categoryTree {
             id
             name
