@@ -3,7 +3,8 @@ query RecommendationsAndBenefits(
   $slug: String
   $identifier: ProductUniqueIdentifier
 ) {
-  product(identifier: $identifier) @context(provider: "vtex.search-graphql") {
+  product(slug: $slug, identifier: $identifier)
+    @context(provider: "vtex.search-graphql") {
     cacheId
     recommendations {
       view {

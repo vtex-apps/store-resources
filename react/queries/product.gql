@@ -3,7 +3,8 @@ query Product(
   $identifier: ProductUniqueIdentifier
   $skipCategoryTree: Boolean = false
 ) {
-  product(identifier: $identifier) @context(provider: "vtex.search-graphql") {
+  product(slug: $slug, identifier: $identifier)
+    @context(provider: "vtex.search-graphql") {
     cacheId
     productName
     productId
@@ -13,6 +14,7 @@ query Product(
     linkText
     productReference
     categoryId
+    categories
     categoryTree @skip(if: $skipCategoryTree) {
       id
       name
