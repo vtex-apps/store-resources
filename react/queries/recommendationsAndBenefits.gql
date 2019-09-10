@@ -1,6 +1,10 @@
 # File deprecated. To be removed in next major!
-query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdentifier) {
-  product(slug: $slug, identifier: $identifier) {
+query RecommendationsAndBenefits(
+  $slug: String
+  $identifier: ProductUniqueIdentifier
+) {
+  product(slug: $slug, identifier: $identifier)
+    @context(provider: "vtex.search-graphql") {
     cacheId
     recommendations {
       view {
@@ -8,11 +12,6 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
         productId
         productName
         description
-        categories
-        categoryTree {
-          name
-          href
-        }
         link
         linkText
         brand
@@ -43,12 +42,12 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
               AvailableQuantity
               Tax
               CacheVersionUsedToCallCheckout
-              Installments (criteria: MAX) {
-                  Value
-                  InterestRate
-                  TotalValuePlusInterestRate
-                  NumberOfInstallments
-                  Name
+              Installments(criteria: MAX) {
+                Value
+                InterestRate
+                TotalValuePlusInterestRate
+                NumberOfInstallments
+                Name
               }
             }
           }
@@ -59,11 +58,6 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
         productId
         productName
         description
-        categories
-        categoryTree {
-          name
-          href
-        }
         link
         linkText
         brand
@@ -94,12 +88,12 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
               AvailableQuantity
               Tax
               CacheVersionUsedToCallCheckout
-              Installments (criteria: MAX) {
-                  Value
-                  InterestRate
-                  TotalValuePlusInterestRate
-                  NumberOfInstallments
-                  Name
+              Installments(criteria: MAX) {
+                Value
+                InterestRate
+                TotalValuePlusInterestRate
+                NumberOfInstallments
+                Name
               }
             }
           }
@@ -110,11 +104,6 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
         productId
         productName
         description
-        categories
-        categoryTree {
-          name
-          href
-        }
         link
         linkText
         brand
@@ -145,12 +134,12 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
               AvailableQuantity
               Tax
               CacheVersionUsedToCallCheckout
-              Installments (criteria: MAX) {
-                  Value
-                  InterestRate
-                  TotalValuePlusInterestRate
-                  NumberOfInstallments
-                  Name
+              Installments(criteria: MAX) {
+                Value
+                InterestRate
+                TotalValuePlusInterestRate
+                NumberOfInstallments
+                Name
               }
             }
           }
@@ -168,19 +157,12 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
           productId
           description
           linkText
-          categories
           categoryId
-          categoriesIds
-          categoryTree {
-            id
-            name
-            href
-          }
           brand
           properties {
-            name,
+            name
             values
-          },
+          }
           items {
             itemId
             name
@@ -214,12 +196,12 @@ query RecommendationsAndBenefits ($slug: String, $identifier: ProductUniqueIdent
                 AvailableQuantity
                 Tax
                 CacheVersionUsedToCallCheckout
-                Installments (criteria: MAX) {
-                    Value
-                    InterestRate
-                    TotalValuePlusInterestRate
-                    NumberOfInstallments
-                    Name
+                Installments(criteria: MAX) {
+                  Value
+                  InterestRate
+                  TotalValuePlusInterestRate
+                  NumberOfInstallments
+                  Name
                 }
               }
             }

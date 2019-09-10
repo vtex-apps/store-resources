@@ -1,21 +1,23 @@
 query search(
-  $query: String,
-  $map: String,
-  $facetQuery: String,
-  $facetMap: String,
-  $orderBy: String,
-  $priceRange: String,
-  $from: Int,
-  $to: Int,
+  $query: String
+  $map: String
+  $facetQuery: String
+  $facetMap: String
+  $orderBy: String
+  $priceRange: String
+  $from: Int
+  $to: Int
   $withFacets: Boolean = true
 ) {
-  products(query: $query, map: $map, orderBy: $orderBy, priceRange: $priceRange, from: $from, to: $to) {
+  products(
+    query: $query
+    map: $map
+    orderBy: $orderBy
+    priceRange: $priceRange
+    from: $from
+    to: $to
+  ) @context(provider: "vtex.search-graphql") {
     cacheId
-    categories
-    categoryTree {
-      name
-      href
-    }
     productId
     description
     productName
@@ -63,7 +65,9 @@ query search(
       name
     }
   }
-  facets(query: $facetQuery, map: $facetMap) @include (if: $withFacets) {
+  facets(query: $facetQuery, map: $facetMap)
+    @include(if: $withFacets)
+    @context(provider: "vtex.search-graphql") {
     departments {
       quantity
       name

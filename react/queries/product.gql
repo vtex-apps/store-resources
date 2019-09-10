@@ -3,7 +3,8 @@ query Product(
   $identifier: ProductUniqueIdentifier
   $skipCategoryTree: Boolean = false
 ) {
-  product(slug: $slug, identifier: $identifier) {
+  product(slug: $slug, identifier: $identifier)
+    @context(provider: "vtex.search-graphql") {
     cacheId
     productName
     productId
@@ -12,9 +13,8 @@ query Product(
     metaTagDescription
     linkText
     productReference
-    categories
     categoryId
-    categoriesIds
+    categories
     categoryTree @skip(if: $skipCategoryTree) {
       id
       name
@@ -96,14 +96,12 @@ query Product(
           productId
           description
           linkText
-          categories
           categoryTree {
             id
             name
             href
           }
           categoryId
-          categoriesIds
           brand
           properties {
             name
@@ -157,7 +155,6 @@ query Product(
         name
         required
       }
-      calculatedAttachments
     }
     itemMetadata {
       items {

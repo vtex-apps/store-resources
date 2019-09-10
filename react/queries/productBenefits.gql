@@ -1,5 +1,6 @@
-query ProductBenefits ($slug: String, $identifier: ProductUniqueIdentifier) {
-  product(slug: $slug, identifier: $identifier) {
+query ProductBenefits($slug: String, $identifier: ProductUniqueIdentifier) {
+  product(slug: $slug, identifier: $identifier)
+    @context(provider: "vtex.search-graphql") {
     cacheId
     benefits {
       featured
@@ -12,9 +13,7 @@ query ProductBenefits ($slug: String, $identifier: ProductUniqueIdentifier) {
           productId
           description
           linkText
-          categories
           categoryId
-          categoriesIds
           categoryTree {
             id
             name
@@ -22,9 +21,9 @@ query ProductBenefits ($slug: String, $identifier: ProductUniqueIdentifier) {
           }
           brand
           properties {
-            name,
+            name
             values
-          },
+          }
           items {
             itemId
             name
@@ -59,11 +58,11 @@ query ProductBenefits ($slug: String, $identifier: ProductUniqueIdentifier) {
                 Tax
                 CacheVersionUsedToCallCheckout
                 Installments {
-                    Value
-                    InterestRate
-                    TotalValuePlusInterestRate
-                    NumberOfInstallments
-                    Name
+                  Value
+                  InterestRate
+                  TotalValuePlusInterestRate
+                  NumberOfInstallments
+                  Name
                 }
               }
             }
