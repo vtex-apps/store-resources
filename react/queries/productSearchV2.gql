@@ -19,8 +19,6 @@ query search(
     to: $to
     hideUnavailableItems: $hideUnavailableItems
   ) @context(provider: "vtex.search-graphql") {
-    titleTag
-    metaTagDescription
     products {
       cacheId
       productId
