@@ -165,6 +165,12 @@ query Product(
         assemblyOptions {
           id
           name
+          inputValues {
+            label
+            maxLength
+            type
+            domain
+          }
           composition {
             minQuantity
             maxQuantity
