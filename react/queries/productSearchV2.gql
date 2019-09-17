@@ -130,6 +130,10 @@ query productSearchV2(
         id
         name
       }
+      clusterHighlights {
+        id
+        name
+      }
       properties {
         name
         values
