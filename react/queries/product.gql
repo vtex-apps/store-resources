@@ -165,6 +165,7 @@ query Product(
         assemblyOptions {
           id
           name
+          required
           inputValues {
             label
             maxLength
