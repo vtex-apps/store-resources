@@ -171,6 +171,7 @@ query Product(
             maxLength
             type
             domain
+            defaultValue
           }
           composition {
             minQuantity
