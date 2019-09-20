@@ -21,6 +21,12 @@ function orderFormConsumer(WrappedComponent) {
   )
 }
 
+const useOrderForm = () => {
+  const context = useContext(OrderFormContext)
+
+  return context.orderFormContext
+}
+
 const contextPropTypes = PropTypes.shape({
   /* Toast message that will be displayed  */
 
@@ -100,4 +106,9 @@ const contextPropTypes = PropTypes.shape({
   }),
 }).isRequired
 
-export default { orderFormConsumer, contextPropTypes, Provider }
+export default {
+  orderFormConsumer,
+  contextPropTypes,
+  Provider,
+  useOrderForm,
+}
