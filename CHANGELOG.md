@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Check if user already dismissed app installation using local storage variable.
+- Check if user already installed app by checking display mode.
 
 ## [0.34.1] - 2019-10-29
 

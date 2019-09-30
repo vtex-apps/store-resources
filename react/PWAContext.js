@@ -54,10 +54,14 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   const context = useMemo(() => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
+      const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
+      const installDismissed = JSON.parse(localStorage.getItem('appInstallDismissed'))
+      const alreadyInstalled = window.matchMedia('(display-mode: standalone)').matches
       return {
         showInstallPrompt,
         settings: {
-          promptOnCustomEvent: disablePrompt ? '' : promptOnCustomEvent
+          promptOnCustomEvent: disablePrompt || isIOS || installDismissed || alreadyInstalled  ? '' 
+            : promptOnCustomEvent
         }
       }
     }
