@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Disable install prompt in PWA for IOS Devices.
+- Disable install prompt in PWA for iOS Devices.
 
 ## [0.29.0] - 2019-09-20
 ### Added
