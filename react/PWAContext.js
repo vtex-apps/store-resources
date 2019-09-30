@@ -54,7 +54,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   const context = useMemo(() => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
-      const isIOS = window && window.navigator && !!window.navigator.userAgent.match(/(iPod|iPhone|iPad)/)
+      const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
 
       return {
         showInstallPrompt,
