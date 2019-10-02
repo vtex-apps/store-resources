@@ -14,15 +14,17 @@ query ProductBenefits($slug: String, $identifier: ProductUniqueIdentifier) {
           description
           linkText
           categoryId
-          categoryTree {
-            id
-            name
-            href
-          }
           brand
           properties {
             name
             values
+          }
+          specificationGroups {
+            name
+            specifications {
+              name
+              values
+            }
           }
           items {
             itemId
