@@ -32,6 +32,13 @@ query search(
       brandId
       link
       categories
+      specificationGroups {
+        name
+        specifications {
+          name
+          values
+        }
+      }
       items {
         itemId
         name
