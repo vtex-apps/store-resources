@@ -79,7 +79,6 @@ query Product(
                 value
               }
             }
-            __typename
           }
           Price
           ListPrice

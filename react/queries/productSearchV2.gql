@@ -81,7 +81,6 @@ query search(
                   value
                 }
               }
-              __typename
             }
             Installments(criteria: MAX) {
               Value
