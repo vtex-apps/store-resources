@@ -46,7 +46,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstall)
   }, [captured, pwaSettings])
 
-  useEffect( () => {
+  useEffect(() => {
     (async () => {
       const appIsFromHomeScreen = await getWebAppData('appIsFromHomeScreen')
       setAlreadyInstalled(appIsFromHomeScreen)
@@ -66,7 +66,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     }
   }, [])
 
-  const context = useMemo( () => {
+  const context = useMemo(() => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
       const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
