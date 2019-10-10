@@ -10,7 +10,7 @@ import { Helmet } from 'vtex.render-runtime'
 import { graphql } from 'react-apollo'
 
 import pwaData from './queries/pwaData.gql'
-import webAppAlreadyInstalled from './utils/webAppIndexedDB' 
+import getWebAppData from './utils/webAppIndexedDB' 
 
 const PWAContext = React.createContext(null)
 
@@ -22,6 +22,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   const captured = useRef(false)
 
   const [alreadyInstalled, setAlreadyInstalled] = useState(false)
+  const [installDismissed, setInstallDismissed] = useState(false)
 
   useEffect(() => {
     const handleBeforeInstall = e => {
@@ -47,8 +48,11 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
 
   useEffect( () => {
     (async () => {
-      const appIsFromHomeScreen = await webAppAlreadyInstalled()
+      const appIsFromHomeScreen = await getWebAppData('appIsFromHomeScreen')
       setAlreadyInstalled(appIsFromHomeScreen)
+      
+      const appInstallDismissed = await getWebAppData('appInstallDismissed')
+      setInstallDismissed(appInstallDismissed)
     })()
   }, [])
 
@@ -66,7 +70,6 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
       const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
-      const installDismissed = JSON.parse(localStorage.getItem('appInstallDismissed'))
 
       return {
         showInstallPrompt,

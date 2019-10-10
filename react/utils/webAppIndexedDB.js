@@ -1,9 +1,9 @@
 import { openDB } from 'idb' 
 
-const webAppAlreadyInstalled = async () => {
+const getWebAppData = async (key) => {
   const dbPromise = openDB('webApp', 1)
-  const { value = false } = await (await dbPromise).get('webApp', 'appIsFromHomeScreen')
+  const { value = false } = await (await dbPromise).get('webApp', key)
   return value
 }
 
-export default webAppAlreadyInstalled
+export default getWebAppData
