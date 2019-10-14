@@ -4,6 +4,7 @@
     "react": "^16.6.3"
   },
   "dependencies": {
+    "idb": "^4.0.5",
     "react-apollo": "^2.5.8"
   },
   "version": "0.30.1"
