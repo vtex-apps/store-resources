@@ -45,6 +45,10 @@ query search(
         nameComplete
         complementName
         ean
+        variations {
+          name
+          values
+        }
         referenceId {
           Key
           Value

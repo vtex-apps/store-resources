@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Fetch `variations` attribute of `product` from `productSearchV2` query.
 
 ## [0.31.0] - 2019-10-14 [YANKED]
 ### Added
