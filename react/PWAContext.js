@@ -69,6 +69,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   const context = useMemo(() => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
+      // ios devices don't have support for installing web apps
       const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
 
       return {
