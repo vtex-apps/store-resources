@@ -66,6 +66,19 @@ query Product(
           }
           teasers {
             name
+            conditions {
+              minimumQuantity
+              parameters {
+                name
+                value
+              }
+            }
+            effects {
+              parameters {
+                name
+                value
+              }
+            }
           }
           Price
           ListPrice

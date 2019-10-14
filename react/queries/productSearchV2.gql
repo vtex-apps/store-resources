@@ -68,6 +68,19 @@ query search(
             }
             teasers {
               name
+              conditions {
+                minimumQuantity
+                parameters {
+                  name
+                  value
+                }
+              }
+              effects {
+                parameters {
+                  name
+                  value
+                }
+              }
             }
             Installments(criteria: MAX) {
               Value
