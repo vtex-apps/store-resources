@@ -79,7 +79,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
         }
       }
     }
-  }, [showInstallPrompt, pwaSettings, alreadyInstalled])
+  }, [showInstallPrompt, pwaSettings, alreadyInstalled, installDismissed])
 
   const hasManifest = !loading && manifest && !error
 
