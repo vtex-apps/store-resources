@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.31.0] - 2019-10-14
+## [0.31.0] - 2019-10-14 [YANKED]
 ### Added
 - Check if user already dismissed app installation using local storage variable.
 - Check if user already installed app by checking display mode.
