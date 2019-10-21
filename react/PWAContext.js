@@ -6,14 +6,14 @@ import React, {
   useRef,
 } from 'react'
 import { Helmet } from 'vtex.render-runtime'
-import { graphql } from 'react-apollo'
+import { useQuery } from 'react-apollo'
 
 import pwaData from './queries/pwaData.gql'
 
 const PWAContext = React.createContext(null)
 
-const PWAProvider = ({ rootPath, children, data = {} }) => {
-  const { manifest, iOSIcons, splashes, pwaSettings, loading, error } = data
+const PWAProvider = ({ rootPath, children }) => {
+  const { data:{manifest, iOSIcons, splashes, pwaSettings}={}, loading, error } = useQuery(pwaData, { ssr: false })
 
   const deferredPrompt = useRef(null)
   /* beforeinstallprompt event is fired even after the userChoice is to cancel (and there is no need to re-render) */
@@ -45,7 +45,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     const prompt = deferredPrompt.current
     if (prompt) {
       prompt.prompt()
-      prompt.userChoice.finally(result => {
+      prompt.userChoice.finally(() => {
         deferredPrompt.current = null
       })
     }
@@ -104,10 +104,4 @@ const usePWA = () => {
   return useContext(PWAContext)
 }
 
-const options = {
-  options: () => ({
-    ssr: false,
-  }),
-}
-
-export default { PWAContext, PWAProvider: graphql(pwaData, options)(PWAProvider), usePWA }
+export default { PWAContext, PWAProvider: PWAProvider, usePWA }
