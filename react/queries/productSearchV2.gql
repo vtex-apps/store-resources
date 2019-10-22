@@ -3,6 +3,9 @@ query search(
   $map: String
   $facetQuery: String
   $facetMap: String
+  $category: String
+  $collection: String
+  $specificationFilters: [String]
   $orderBy: String
   $priceRange: String
   $from: Int
@@ -13,6 +16,9 @@ query search(
   productSearch(
     query: $query
     map: $map
+    category: $category
+    collection: $collection
+    specificationFilters: $specificationFilters
     orderBy: $orderBy
     priceRange: $priceRange
     from: $from
