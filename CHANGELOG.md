@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.33.1] - 2019-10-24
 ### Removed
 - titletag and metaTagDescription resolvers from productSearch. They are used from the searchMetadata query and are unneeded.
 
