@@ -1,21 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
+import hoistNonReactStatics from 'hoist-non-react-statics'
 import PropTypes from 'prop-types'
 
-const { Consumer, Provider } = React.createContext({})
+const OrderFormContext = React.createContext({})
+const { Provider } = OrderFormContext
 
 function orderFormConsumer(WrappedComponent) {
-  return class OrderFormContext extends Component {
-    static displayName = `OrderFormContext(${WrappedComponent.displayName ||
-      WrappedComponent.name})`
-
-    render() {
-      return (
-        <Consumer>
-          {context => <WrappedComponent {...this.props} {...context} />}
-        </Consumer>
-      )
-    }
+  const WithOrderForm = (props) => {
+    const { orderFormContext } = useContext(OrderFormContext)
+    return <WrappedComponent {...props} orderFormContext={orderFormContext} />
   }
+  WithOrderForm.displayName = `OrderFormContext(${Component.displayName ||
+    Component.name ||
+    'Component'})`
+  WithOrderForm.WrappedComponent = WrappedComponent
+  
+  return hoistNonReactStatics(
+    WithOrderForm,
+    WrappedComponent
+  )
 }
 
 const contextPropTypes = PropTypes.shape({
