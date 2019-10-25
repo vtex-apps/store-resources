@@ -36,6 +36,8 @@ query search(
       brandId
       link
       categories
+      titleTag
+      metaTagDescription
       specificationGroups {
         name
         specifications {

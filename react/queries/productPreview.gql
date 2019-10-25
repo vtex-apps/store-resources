@@ -5,17 +5,17 @@ fragment product on Product {
   linkText
   titleTag
   metaTagDescription
-  categories
-  categoryTree {
+  specificationGroups {
     name
-    href
+    specifications {
+      name
+      values
+    }
   }
   items {
     itemId
     name
     nameComplete
-    complementName
-    ean
     referenceId {
       Key
       Value
