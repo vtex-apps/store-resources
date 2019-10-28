@@ -1,6 +1,6 @@
 import { openDB } from 'idb' 
 
-const webAppAlreadyInstalled = async () => {
+const webAppAlreadyInstalled = async (key) => {
   const db = await openDB('webApp', 1, {
     upgrade(db) {
       db.createObjectStore('webApp', {
@@ -8,7 +8,7 @@ const webAppAlreadyInstalled = async () => {
       })
     },
   })
-  const { value = false } = await (await db).get('webApp', 'appIsFromHomeScreen') || {}
+  const { value = false } = await (await db).get('webApp', key) || {}
   return value
 }
 

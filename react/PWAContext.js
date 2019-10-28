@@ -22,6 +22,8 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   const captured = useRef(false)
 
   const [alreadyInstalled, setAlreadyInstalled] = useState(false)
+  const [installDismissed, setInstallDismissed] = useState(false)
+
 
   useEffect(() => {
     const handleBeforeInstall = e => {
@@ -47,8 +49,11 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
 
   useEffect( () => {
     (async () => {
-      const appIsFromHomeScreen = await webAppAlreadyInstalled()
+      const appIsFromHomeScreen = await webAppAlreadyInstalled('appIsFromHomeScreen')
       setAlreadyInstalled(appIsFromHomeScreen)
+
+      const appInstallDismissed = await webAppAlreadyInstalled('installDIsmissed')
+      setInstallDismissed(appInstallDismissed)
     })()
   }, [])
 
@@ -66,8 +71,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
       /* browsers for ios devices doesn't support install prompt */
-      const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad|WebKit|AppleWebKit)/)
-      const installDismissed = JSON.parse(localStorage.getItem('appInstallDismissed'))
+      const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
 
       return {
         showInstallPrompt,
