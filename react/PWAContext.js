@@ -65,7 +65,8 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   const context = useMemo( () => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
-      const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
+      /* browsers for ios devices doesn't support install prompt */
+      const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad|WebKit|AppleWebKit)/)
       const installDismissed = JSON.parse(localStorage.getItem('appInstallDismissed'))
 
       return {
