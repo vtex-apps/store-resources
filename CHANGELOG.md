@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.34.1] - 2019-10-29
+
 ## [0.34.0] - 2019-10-29
 ### Added
 - `useOrderForm` hook.
