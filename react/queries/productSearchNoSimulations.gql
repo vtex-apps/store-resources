@@ -1,0 +1,68 @@
+query search(
+  $query: String
+  $map: String
+  $facetQuery: String
+  $facetMap: String
+  $orderBy: String
+  $priceRange: String
+  $from: Int
+  $to: Int
+  $withFacets: Boolean = true
+) {
+  productsNoSimulations(
+    query: $query
+    map: $map
+    orderBy: $orderBy
+    priceRange: $priceRange
+    from: $from
+    to: $to
+  ) @context(provider: "vtex.search-graphql") {
+    cacheId
+    productId
+    description
+    productName
+    linkText
+    brand
+    link
+    items {
+      itemId
+      name
+      nameComplete
+      complementName
+      ean
+      referenceId {
+        Key
+        Value
+      }
+      measurementUnit
+      unitMultiplier
+      images {
+        cacheId
+        imageId
+        imageLabel
+        imageTag
+        imageUrl
+        imageText
+      }
+      sellers {
+        sellerId
+        sellerName
+        commertialOffer {
+          discountHighlights {
+            name
+          }
+          Price
+          ListPrice
+          PriceWithoutDiscount
+          RewardValue
+          PriceValidUntil
+          AvailableQuantity
+        }
+      }
+    }
+    productClusters {
+      id
+      name
+    }
+  }
+}

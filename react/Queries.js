@@ -11,6 +11,7 @@ import address from './queries/address.gql'
 import searchMetadata from './queries/searchMetadata.gql'
 import productCategoryTree from './queries/UNSTABLE__productCategoryTree.gql'
 import facets from './queries/facets.gql'
+import productSearchNoSimulations from './queries/productSearchNoSimulations.gql'
 
 export default {
   address,
@@ -26,4 +27,5 @@ export default {
   UNSTABLE__productCategoryTree: productCategoryTree,
   searchMetadata,
   facets,
+  productSearchNoSimulations
 }
