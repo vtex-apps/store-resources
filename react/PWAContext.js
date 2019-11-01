@@ -4,11 +4,13 @@ import React, {
   useEffect,
   useMemo,
   useRef,
+  useState,
 } from 'react'
 import { Helmet } from 'vtex.render-runtime'
 import { graphql } from 'react-apollo'
 
 import pwaData from './queries/pwaData.gql'
+import webAppAlreadyInstalled from './utils/webAppIndexedDB' 
 
 const PWAContext = React.createContext(null)
 
@@ -18,6 +20,10 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   const deferredPrompt = useRef(null)
   /* beforeinstallprompt event is fired even after the userChoice is to cancel (and there is no need to re-render) */
   const captured = useRef(false)
+
+  const [alreadyInstalled, setAlreadyInstalled] = useState(false)
+  const [installDismissed, setInstallDismissed] = useState(false)
+
 
   useEffect(() => {
     const handleBeforeInstall = e => {
@@ -41,6 +47,16 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstall)
   }, [captured, pwaSettings])
 
+  useEffect( () => {
+    (async () => {
+      const appIsFromHomeScreen = await webAppAlreadyInstalled('appIsFromHomeScreen')
+      setAlreadyInstalled(appIsFromHomeScreen)
+
+      const appInstallDismissed = await webAppAlreadyInstalled('installDIsmissed')
+      setInstallDismissed(appInstallDismissed)
+    })()
+  }, [])
+
   const showInstallPrompt = useCallback(() => {
     const prompt = deferredPrompt.current
     if (prompt) {
@@ -51,17 +67,21 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     }
   }, [])
 
-  const context = useMemo(() => {
+  const context = useMemo( () => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
+      /* browsers for ios devices doesn't support install prompt */
+      const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
+
       return {
         showInstallPrompt,
         settings: {
-          promptOnCustomEvent: disablePrompt ? '' : promptOnCustomEvent
+          promptOnCustomEvent: (disablePrompt || isIOS || installDismissed || alreadyInstalled) ? '' 
+            : promptOnCustomEvent
         }
       }
     }
-  }, [showInstallPrompt, pwaSettings])
+  }, [showInstallPrompt, pwaSettings, alreadyInstalled])
 
   const hasManifest = !loading && manifest && !error
 
