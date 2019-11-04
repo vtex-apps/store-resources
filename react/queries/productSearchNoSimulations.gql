@@ -9,7 +9,7 @@ query search(
   $to: Int
   $withFacets: Boolean = true
 ) {
-  productsNoSimulations(
+  productSearchNoSimulations (
     query: $query
     map: $map
     orderBy: $orderBy
@@ -17,52 +17,100 @@ query search(
     from: $from
     to: $to
   ) @context(provider: "vtex.search-graphql") {
-    cacheId
-    productId
-    description
-    productName
-    linkText
-    brand
-    link
-    items {
-      itemId
-      name
-      nameComplete
-      complementName
-      ean
-      referenceId {
-        Key
-        Value
-      }
-      measurementUnit
-      unitMultiplier
-      images {
-        cacheId
-        imageId
-        imageLabel
-        imageTag
-        imageUrl
-        imageText
-      }
-      sellers {
-        sellerId
-        sellerName
-        commertialOffer {
-          discountHighlights {
-            name
-          }
-          Price
-          ListPrice
-          PriceWithoutDiscount
-          RewardValue
-          PriceValidUntil
-          AvailableQuantity
+    products {
+      cacheId
+      productId
+      description
+      productName
+      productReference
+      linkText
+      brand
+      brandId
+      link
+      categories
+      specificationGroups {
+        name
+        specifications {
+          name
+          values
         }
       }
+      items {
+        itemId
+        name
+        nameComplete
+        complementName
+        ean
+        variations {
+          name
+          values
+        }
+        referenceId {
+          Key
+          Value
+        }
+        measurementUnit
+        unitMultiplier
+        images {
+          cacheId
+          imageId
+          imageLabel
+          imageTag
+          imageUrl
+          imageText
+        }
+        sellers {
+          sellerId
+          sellerName
+          commertialOffer {
+            discountHighlights {
+              name
+            }
+            teasers {
+              name
+              conditions {
+                minimumQuantity
+                parameters {
+                  name
+                  value
+                }
+              }
+              effects {
+                parameters {
+                  name
+                  value
+                }
+              }
+            }
+            Installments(criteria: MAX) {
+              Value
+              InterestRate
+              TotalValuePlusInterestRate
+              NumberOfInstallments
+              Name
+            }
+            Price
+            ListPrice
+            PriceWithoutDiscount
+            RewardValue
+            PriceValidUntil
+            AvailableQuantity
+          }
+        }
+      }
+      productClusters {
+        id
+        name
+      }
+      properties {
+        name
+        values
+      }
     }
-    productClusters {
-      id
+    recordsFiltered
+    breadcrumb {
       name
+      href
     }
   }
 }

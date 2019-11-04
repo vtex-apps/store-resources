@@ -12,6 +12,7 @@ query search(
   $to: Int
   $withFacets: Boolean = true
   $hideUnavailableItems: Boolean = false
+  $skipBreadcrumb: Boolean = false
 ) {
   productSearch(
     query: $query
@@ -116,7 +117,7 @@ query search(
       }
     }
     recordsFiltered
-    breadcrumb {
+    breadcrumb @skip(if: $skipBreadcrumb) {
       name
       href
     }
