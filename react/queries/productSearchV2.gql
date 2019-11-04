@@ -12,7 +12,11 @@ query productSearchV2(
   $to: Int
   $withFacets: Boolean = true
   $hideUnavailableItems: Boolean = false
+<<<<<<< HEAD
   $skusFilter: ItemsFilter = ALL_AVAILABLE
+=======
+  $skipBreadcrumb: Boolean = false
+>>>>>>> Makes correct query and skips breadcrumb
 ) {
   productSearch(
     query: $query
@@ -127,7 +131,7 @@ query productSearchV2(
       }
     }
     recordsFiltered
-    breadcrumb {
+    breadcrumb @skip(if: $skipBreadcrumb) {
       name
       href
     }
