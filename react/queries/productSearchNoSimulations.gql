@@ -5,6 +5,7 @@ query search(
   $priceRange: String
   $from: Int
   $to: Int
+  $hideUnavailableItems: Boolean = false
 ) {
   productSearchNoSimulations (
     query: $query
