@@ -1,13 +1,10 @@
 query search(
   $query: String
   $map: String
-  $facetQuery: String
-  $facetMap: String
   $orderBy: String
   $priceRange: String
   $from: Int
   $to: Int
-  $withFacets: Boolean = true
 ) {
   productSearchNoSimulations (
     query: $query
