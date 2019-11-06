@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.36.0] - 2019-11-06
+
 ## [0.35.0] - 2019-11-01
 ### Added
 - Check if user already dismissed app installation using local storage variable.
