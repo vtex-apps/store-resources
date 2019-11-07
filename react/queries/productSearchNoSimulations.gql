@@ -7,13 +7,14 @@ query search(
   $to: Int
   $hideUnavailableItems: Boolean = false
 ) {
-  productSearchNoSimulations (
+  productSearchNoSimulations(
     query: $query
     map: $map
     orderBy: $orderBy
     priceRange: $priceRange
     from: $from
     to: $to
+    hideUnavailableItems: $hideUnavailableItems
   ) @context(provider: "vtex.search-graphql") {
     products {
       cacheId
