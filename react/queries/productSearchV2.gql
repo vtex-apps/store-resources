@@ -12,6 +12,7 @@ query productSearchV2(
   $to: Int
   $withFacets: Boolean = true
   $hideUnavailableItems: Boolean = false
+  $skusFilter: ItemsFilter
 ) {
   productSearch(
     query: $query
@@ -43,7 +44,7 @@ query productSearchV2(
           values
         }
       }
-      items {
+      items(filter: $skusFilter) {
         itemId
         name
         nameComplete
