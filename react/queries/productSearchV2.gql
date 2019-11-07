@@ -1,4 +1,4 @@
-query search(
+query productSearchV2(
   $query: String
   $map: String
   $facetQuery: String
