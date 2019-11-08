@@ -6,12 +6,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Care `skusFilter` variable to productSearchV2 query.
 
 ## [0.36.1] - 2019-11-07
 ### Changed
 - Renames queries with same name
 
 ## [0.36.0] - 2019-11-06
+### Added
+- Create facets query.
 
 ## [0.35.0] - 2019-11-01
 ### Added
