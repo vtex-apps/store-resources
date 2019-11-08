@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Make `skusFilter` variable default value be `ALL_AVAILABLE` in search query.
 
 ## [0.36.2] - 2019-11-08
 ### Added
