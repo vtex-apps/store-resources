@@ -12,7 +12,7 @@ query productSearchV2(
   $to: Int
   $withFacets: Boolean = true
   $hideUnavailableItems: Boolean = false
-  $skusFilter: ItemsFilter
+  $skusFilter: ItemsFilter = ALL_AVAILABLE
 ) {
   productSearch(
     query: $query
