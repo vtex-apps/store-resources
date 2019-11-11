@@ -10,7 +10,6 @@ import { Helmet } from 'vtex.render-runtime'
 import { graphql } from 'react-apollo'
 
 import pwaData from './queries/pwaData.gql'
-import webAppAlreadyInstalled from './utils/webAppIndexedDB' 
 
 const PWAContext = React.createContext(null)
 
@@ -48,20 +47,24 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   }, [captured, pwaSettings])
 
   useEffect( () => {
-    (async () => {
-      const appIsFromHomeScreen = await webAppAlreadyInstalled('appIsFromHomeScreen')
-      setAlreadyInstalled(appIsFromHomeScreen)
-
-      const appInstallDismissed = await webAppAlreadyInstalled('installDIsmissed')
-      setInstallDismissed(appInstallDismissed)
-    })()
+    const webAppInstalled = localStorage.getItem('webAppInstalled')
+    if(webAppInstalled) {
+      setAlreadyInstalled(webAppInstalled)
+    }
+    const webAppInstallDismissed = localStorage.getItem('webAppInstallDismissed')
+    if(webAppInstallDismissed) {
+      setAlreadyInstalled(webAppInstallDismissed)
+    }
   }, [])
 
   const showInstallPrompt = useCallback(() => {
     const prompt = deferredPrompt.current
     if (prompt) {
       prompt.prompt()
-      prompt.userChoice.finally(result => {
+      prompt.userChoice.finally(choiceResult => {
+        if(choiceResult === 'accepted') {
+          localStorage.setItem('webAppInstalled', 'true')
+        }
         deferredPrompt.current = null
       })
     }
