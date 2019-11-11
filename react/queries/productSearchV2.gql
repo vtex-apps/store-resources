@@ -37,6 +37,16 @@ query productSearchV2(
       brandId
       link
       categories
+      priceRange {
+        sellingPrice {
+          highPrice
+          lowPrice
+        }
+        listPrice {
+          highPrice
+          lowPrice
+        }
+      }
       specificationGroups {
         name
         specifications {
