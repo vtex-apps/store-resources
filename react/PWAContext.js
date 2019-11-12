@@ -53,7 +53,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     }
     const webAppInstallDismissed = localStorage.getItem('webAppInstallDismissed')
     if(webAppInstallDismissed) {
-      setAlreadyInstalled(webAppInstallDismissed)
+      setInstallDismissed(webAppInstallDismissed)
     }
   }, [])
 
@@ -64,6 +64,8 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
       prompt.userChoice.finally(choiceResult => {
         if(choiceResult === 'accepted') {
           localStorage.setItem('webAppInstalled', 'true')
+        } else {
+          localStorage.setItem('webAppInstallDismissed', 'true')
         }
         deferredPrompt.current = null
       })
