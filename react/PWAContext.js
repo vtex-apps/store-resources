@@ -62,7 +62,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     if (prompt) {
       prompt.prompt()
       prompt.userChoice.finally(choiceResult => {
-        if(choiceResult === 'accepted') {
+        if (choiceResult === 'accepted') {
           localStorage.setItem('webAppInstalled', 'true')
         } else {
           localStorage.setItem('webAppInstallDismissed', 'true')
