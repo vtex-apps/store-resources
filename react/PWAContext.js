@@ -52,7 +52,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
       setAlreadyInstalled(webAppInstalled)
     }
     const webAppInstallDismissed = localStorage.getItem('webAppInstallDismissed')
-    if(webAppInstallDismissed) {
+    if (webAppInstallDismissed) {
       setInstallDismissed(webAppInstallDismissed)
     }
   }, [])
