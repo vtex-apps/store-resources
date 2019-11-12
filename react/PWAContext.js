@@ -48,7 +48,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
 
   useEffect( () => {
     const webAppInstalled = localStorage.getItem('webAppInstalled')
-    if(webAppInstalled) {
+    if (webAppInstalled) {
       setAlreadyInstalled(webAppInstalled)
     }
     const webAppInstallDismissed = localStorage.getItem('webAppInstallDismissed')
