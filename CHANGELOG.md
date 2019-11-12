@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Save when user answer when the install prompt is showd.
+- Save when user answer when the install prompt is showed.
 
 ### Removed
 - `idb`
