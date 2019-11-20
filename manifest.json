@@ -13,7 +13,8 @@
   "dependencies": {
     "vtex.store-graphql": "2.x",
     "vtex.search-graphql": "0.x",
-    "vtex.pwa-graphql": "1.x"
+    "vtex.pwa-graphql": "1.x",
+    "vtex.pixel-manager": "1.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
