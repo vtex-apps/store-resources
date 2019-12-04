@@ -8,6 +8,7 @@ import React, {
 } from 'react'
 import { Helmet } from 'vtex.render-runtime'
 import { graphql } from 'react-apollo'
+import { usePixel } from 'vtex.pixel-manager/PixelContext'
 
 import pwaData from './queries/pwaData.gql'
 
@@ -15,6 +16,7 @@ const PWAContext = React.createContext(null)
 
 const PWAProvider = ({ rootPath, children, data = {} }) => {
   const { manifest, iOSIcons, splashes, pwaSettings, loading, error } = data
+  const { push } = usePixel()
 
   const deferredPrompt = useRef(null)
   /* beforeinstallprompt event is fired even after the userChoice is to cancel (and there is no need to re-render) */
@@ -61,12 +63,16 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
     const prompt = deferredPrompt.current
     if (prompt) {
       prompt.prompt()
-      prompt.userChoice.finally(choiceResult => {
-        if (choiceResult === 'accepted') {
+      prompt.userChoice.then(choiceResult => {
+        if (choiceResult.outcome === 'accepted') {
           localStorage.setItem('webAppInstalled', 'true')
         } else {
           localStorage.setItem('webAppInstallDismissed', 'true')
         }
+        push({
+          event: 'installWebApp',
+          userChoice: choiceResult.outcome
+        })
         deferredPrompt.current = null
       })
     }
