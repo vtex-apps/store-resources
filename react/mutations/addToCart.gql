@@ -1,5 +1,5 @@
-mutation addItem($orderFormId: String, $items: [OrderFormItemInput]) {
-  addItem(orderFormId: $orderFormId, items: $items) {
+mutation addItem($orderFormId: String, $items: [OrderFormItemInput], $utmParams: OrderFormInputUTMParams, $utmiParams: OrderFormInputUTMIParams) {
+  addItem(orderFormId: $orderFormId, items: $items, utmParams: $utmParams, utmiParams: $utmiParams) {
     cacheId
     orderFormId
     value
