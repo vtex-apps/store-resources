@@ -2,8 +2,9 @@ query facets(
   $query: String
   $map: String
   $hideUnavailableItems: Boolean = false
+  $ignoreSpecificationFilters: Boolean = true
 ) {
-  facets(query: $query, map: $map, hideUnavailableItems: $hideUnavailableItems)
+  facets(query: $query, map: $map, hideUnavailableItems: $hideUnavailableItems, ignoreSpecificationFilters: $ignoreSpecificationFilters)
     @context(provider: "vtex.search-graphql") {
     departments {
       quantity
