@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- `ignoreSpecificationFilters` to the `facets` query.
+- `facetsBehavior` to the `facets` query.
 
 ## [0.39.1] - 2019-12-27
 ### Fixed
