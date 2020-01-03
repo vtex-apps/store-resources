@@ -110,12 +110,14 @@ query orderForm {
     clientProfileData {
       email
       firstName
+      lastName
     }
     storePreferencesData {
       countryCode
       currencyCode
       timeZone
     }
+    userProfileId
     checkedInPickupPointId
     isCheckedIn
   }
