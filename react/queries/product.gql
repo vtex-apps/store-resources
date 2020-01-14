@@ -169,6 +169,14 @@ query Product(
         required
       }
     }
+    skuSpecifications {
+      field {
+        name
+      }
+      values {
+        name
+      }
+    }
     itemMetadata {
       items {
         id
