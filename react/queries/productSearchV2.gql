@@ -13,6 +13,7 @@ query productSearchV2(
   $withFacets: Boolean = true
   $hideUnavailableItems: Boolean = false
   $skusFilter: ItemsFilter = ALL_AVAILABLE
+  $simulationBehavior: SimulationBehavior = default
 ) {
   productSearch(
     query: $query
@@ -25,6 +26,7 @@ query productSearchV2(
     from: $from
     to: $to
     hideUnavailableItems: $hideUnavailableItems
+    simulationBehavior: $simulationBehavior
   ) @context(provider: "vtex.search-graphql") {
     products {
       cacheId
