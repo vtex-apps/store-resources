@@ -16,6 +16,7 @@ query orderForm {
     }
     items {
       id
+      productId
       name
       imageUrl
       detailUrl
