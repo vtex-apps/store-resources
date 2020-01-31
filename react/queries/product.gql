@@ -88,6 +88,7 @@ query Product(
           AvailableQuantity
           Tax
           CacheVersionUsedToCallCheckout
+          giftSkuIds
           Installments {
             Value
             InterestRate
