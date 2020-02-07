@@ -99,9 +99,5 @@ query facets(
       slug
       map
     }
-    queryArgs {
-      query
-      map
-    }
   }
 }

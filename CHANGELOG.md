@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.44.0] - 2020-02-07
+## [0.44.0] - 2020-02-07 [YANKED]
 ### Added
 - Add queryArgs field to facets resolver for new search URLs structure
 
