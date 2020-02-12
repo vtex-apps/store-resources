@@ -1,6 +1,7 @@
 query Product(
   $slug: String
   $identifier: ProductUniqueIdentifier
+  $imagePerSKUQuantity: Int = 10
   $skipCategoryTree: Boolean = false
 ) {
   product(slug: $slug, identifier: $identifier)
@@ -45,7 +46,7 @@ query Product(
       }
       measurementUnit
       unitMultiplier
-      images(quantity: 10) {
+      images(quantity: $imagePerSKUQuantity) {
         imageId
         imageLabel
         imageTag
