@@ -17,7 +17,7 @@ mutation updateItems($orderFormId: String, $items: [OrderFormItemInput]) {
       additionalInfo {
         brandName
       }
-      hasAttachment
+      canHaveAttachment
       productCategoryIds
       productCategories
       skuName
