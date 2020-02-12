@@ -24,6 +24,7 @@ query orderForm {
       additionalInfo {
         brandName
       }
+      canHaveAttachment
       productCategoryIds
       productCategories
       skuName
