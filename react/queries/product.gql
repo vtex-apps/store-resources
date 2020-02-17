@@ -95,6 +95,21 @@ query Product(
             NumberOfInstallments
             Name
           }
+          giftSkuIds {
+            productName
+            brand
+            linkText
+            description
+            productTitle
+            skuItem {
+              nameComplete
+              images {
+                imageUrl
+                imageLabel
+                imageText
+              }
+            }
+          }
         }
       }
       variations {
