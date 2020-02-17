@@ -1,3 +1,6 @@
+/** DEPRECATED, being kept just for retrocompatibility.
+ * Create individual entry points for each query instead */
+
 import orderForm from './queries/orderForm.gql'
 import product from './queries/product.gql'
 import productPreviewFragment from './queries/productPreview.gql'

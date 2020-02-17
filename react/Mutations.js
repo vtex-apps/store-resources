@@ -1,3 +1,6 @@
+/** DEPRECATED, being kept just for retrocompatibility.
+ * Create individual entry points for each mutation instead */
+
 import addToCart from './mutations/addToCart.gql'
 import updateItems from './mutations/updateItems.gql'
 import updateOrderFormProfile from './mutations/updateOrderFormProfile.gql'
