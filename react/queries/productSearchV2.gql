@@ -116,6 +116,19 @@ query productSearchV2(
             RewardValue
             PriceValidUntil
             AvailableQuantity
+            gifts {
+              productName
+              brand
+              linkText
+              description
+              productTitle
+              nameComplete
+              images {
+                imageUrl
+                imageLabel
+                imageText
+              }
+            }
           }
         }
       }

@@ -95,19 +95,17 @@ query Product(
             NumberOfInstallments
             Name
           }
-          giftSkuIds {
+          gifts {
             productName
             brand
             linkText
             description
             productTitle
-            skuItem {
-              nameComplete
-              images {
-                imageUrl
-                imageLabel
-                imageText
-              }
+            nameComplete
+            images {
+              imageUrl
+              imageLabel
+              imageText
             }
           }
         }
