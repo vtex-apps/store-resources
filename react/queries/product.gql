@@ -45,7 +45,7 @@ query Product(
       }
       measurementUnit
       unitMultiplier
-      images(quantity: 10) {
+      images {
         imageId
         imageLabel
         imageTag
