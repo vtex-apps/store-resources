@@ -100,8 +100,7 @@ query Product(
             brand
             linkText
             description
-            productTitle
-            nameComplete
+            skuName
             images {
               imageUrl
               imageLabel
