@@ -13,25 +13,12 @@ query orderForm {
       items {
         id
         name
-        skuName
-        productId
-        refId
-        ean
-        seller
-        imageUrl
         assemblyOptions {
           id
           name
-          required
           composition {
-            minQuantity
-            maxQuantity
             items {
               id
-              minQuantity
-              maxQuantity
-              initialQuantity
-              priceTable
               seller
             }
           }
