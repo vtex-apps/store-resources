@@ -14,8 +14,8 @@ import pwaData from './queries/pwaData.gql'
 
 const PWAContext = React.createContext(null)
 
-const TWO_SECONDS = 2000
-const getTimeout = hints => TWO_SECONDS * (hints.desktop ? 1 : 2)
+const QUERY_DELAY = 2000
+const getQueryDelay = hints => QUERY_DELAY * (hints.desktop ? 1 : 2)
 
 const PWAProvider = ({ rootPath, children }) => {
   const [loadPwa, { called, loading, data = {} }] = useLazyQuery(pwaData, { ssr: false })
@@ -32,10 +32,11 @@ const PWAProvider = ({ rootPath, children }) => {
 
   useEffect(() => {
     window.addEventListener('load', () => {
-      const timeout = getTimeout(hints)
+      const timeout = getQueryDelay(hints)
       const requestIdleCallback = window.requestIdleCallback || function cb(fn) {
         setTimeout(fn, timeout)
       }
+      // On browsers that don't support requestIdleCallback (i.e. Safari) falls back to a timeout
       requestIdleCallback(() => {
         loadPwa()
       }, { timeout })
