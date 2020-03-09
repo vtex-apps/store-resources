@@ -6,12 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Installment Criteria as possible param on productSearchV2 query
 
 ## [0.53.0] - 2020-03-25
 ### Added
 - Adds item metadata with assembly options
 
 ## [0.52.1] - 2020-03-13
+- Make PWA Provider do a lazy query.
 
 ## [0.52.0] - 2020-03-11
 ### Added

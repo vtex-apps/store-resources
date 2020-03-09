@@ -14,6 +14,7 @@ query productSearchV2(
   $hideUnavailableItems: Boolean = false
   $skusFilter: ItemsFilter = ALL_AVAILABLE
   $simulationBehavior: SimulationBehavior = default
+  $installmentsCriteria: InstallmentsCriteria = MAX
 ) {
   productSearch(
     query: $query
@@ -103,7 +104,7 @@ query productSearchV2(
                 }
               }
             }
-            Installments(criteria: MAX) {
+            Installments(criteria: $installmentsCriteria) {
               Value
               InterestRate
               TotalValuePlusInterestRate
