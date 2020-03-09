@@ -144,6 +144,18 @@ query Product(
               discountHighlights {
                 name
               }
+              gifts {
+                productName
+                brand
+                linkText
+                description
+                skuName
+                images {
+                  imageUrl
+                  imageLabel
+                  imageText
+                }
+              }
               Price
               ListPrice
               PriceWithoutDiscount
