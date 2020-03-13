@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.52.1] - 2020-03-13
+
 ## [0.52.0] - 2020-03-11
 ### Added
 - Get product estimated arrival date in product query.
