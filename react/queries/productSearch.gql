@@ -1,5 +1,6 @@
 query productSearch(
   $query: String
+  $fullText: string
   $map: String
   $facetQuery: String
   $facetMap: String
@@ -11,6 +12,7 @@ query productSearch(
 ) {
   products(
     query: $query
+    fullText: $fullText
     map: $map
     orderBy: $orderBy
     priceRange: $priceRange

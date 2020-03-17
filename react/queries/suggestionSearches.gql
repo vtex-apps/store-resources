@@ -1,0 +1,13 @@
+query suggestionSearches($fullText: String!) {
+  suggestionSearches(fullText: $fullText)
+    @context(provider: "vtex.search-graphql") {
+    searches {
+      term
+      attributes {
+        key
+        value
+        labelValue
+      }
+    }
+  }
+}

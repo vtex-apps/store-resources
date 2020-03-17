@@ -1,0 +1,14 @@
+query SearchMetadataV2(
+  $query: String
+  $selectedFacets: [SelectedFacetInput]
+  $fullText: String
+) {
+  searchMetadata(
+    query: $query
+    selectedFacets: $selectedFacets
+    fullText: $fullText
+  ) @context(provider: "vtex.search-graphql") {
+    titleTag
+    metaTagDescription
+  }
+}
