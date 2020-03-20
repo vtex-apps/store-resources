@@ -1,9 +1,9 @@
-query suggestionProducts(
+query productSuggestions(
   $fullText: String!
   $facetKey: String
   $facetValue: String
 ) {
-  suggestionProducts(
+  productSuggestions(
     fullText: $fullText
     facetKey: $facetKey
     facetValue: $facetValue

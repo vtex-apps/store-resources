@@ -1,3 +1,3 @@
-import suggestionSearches from './queries/suggestionSearches.gql'
+import searchSuggestions from './queries/searchSuggestions.gql'
 
-export default suggestionSearches
+export default searchSuggestions

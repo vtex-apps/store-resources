@@ -1,3 +1,3 @@
-import suggestionProducts from './queries/suggestionProducts.gql'
+import productSuggestions from './queries/productSuggestions.gql'
 
-export default suggestionProducts
+export default productSuggestions

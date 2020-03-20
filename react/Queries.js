@@ -18,8 +18,8 @@ import productCategoryTree from './queries/UNSTABLE__productCategoryTree.gql'
 import facets from './queries/facets.gql'
 import facetsV2 from './queries/facetsV2.gql'
 import topSearches from './queries/topSearches.gql'
-import suggestionSearches from './queries/suggestionSearches.gql'
-import suggestionProducts from './queries/suggestionProducts.gql'
+import searchSuggestions from './queries/searchSuggestions.gql'
+import productSuggestions from './queries/productSuggestions.gql'
 
 export default {
   address,
@@ -39,6 +39,6 @@ export default {
   facets,
   facetsV2,
   topSearches,
-  suggestionSearches,
-  suggestionProducts
+  searchSuggestions,
+  productSuggestions
 };

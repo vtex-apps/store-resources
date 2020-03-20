@@ -1,5 +1,5 @@
-query suggestionSearches($fullText: String!) {
-  suggestionSearches(fullText: $fullText)
+query searchSuggestions($fullText: String!) {
+  searchSuggestions(fullText: $fullText)
     @context(provider: "vtex.search-graphql") {
     searches {
       term
