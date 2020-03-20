@@ -28,5 +28,5 @@ export default {
   productBenefits,
   UNSTABLE__productCategoryTree: productCategoryTree,
   searchMetadata,
-  facets
-};
+  facets,
+}
