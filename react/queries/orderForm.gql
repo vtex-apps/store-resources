@@ -9,6 +9,29 @@ query orderForm {
         fields
       }
     }
+    itemMetadata {
+      items {
+        id
+        name
+        assemblyOptions {
+          id
+          name
+          composition {
+            items {
+              id
+              seller
+            }
+          }
+        }
+      }
+      priceTable {
+        type
+        values {
+          id
+          price
+        }
+      }
+    }
     value
     totalizers {
       id
