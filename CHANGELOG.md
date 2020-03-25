@@ -8,7 +8,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Adds item metadata with assembly options
-  
+
+## [0.52.1] - 2020-03-13
+
+## [0.52.0] - 2020-03-11
+### Added
+- Get product estimated arrival date in product query.
+
+## [0.51.1] - 2020-03-07
+### Fixed
+- Remove gifts from product query temporarily.
+
+## [0.51.0] - 2020-03-03
+### Added
+- `installmentCriteria` param on products query.
+
+## [0.50.0] - 2020-03-03
+### Added
+- `gifts` field to product queries.
+
 ## [0.49.0] - 2020-03-02
 ### Added
 - Add queryArgs field to facets resolver for new search URLs structure
