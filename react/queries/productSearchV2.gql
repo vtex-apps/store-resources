@@ -14,7 +14,7 @@ query productSearchV2(
   $hideUnavailableItems: Boolean = false
   $skusFilter: ItemsFilter = ALL_AVAILABLE
   $simulationBehavior: SimulationBehavior = default
-  $installmentCriteria: InstallmentsCriteria = MAX
+  $installmentCriteria: InstallmentsCriteria = MAX_WITHOUT_INTEREST
 ) {
   productSearch(
     query: $query
