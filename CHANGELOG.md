@@ -34,7 +34,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.54.0] - 2020-03-26
 ### Added
 - Adds productId for item listing
-### Added
 - Installment Criteria as possible param on productSearchV2 query
 
 ## [0.53.0] - 2020-03-25
