@@ -7,14 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- `productSearchV3`, `facetsV2`, `searchMetadataV2`, `topSearches`, `suggestionProducts` and `suggestionSearches` queries.
+
+### Added
 - Installment Criteria as possible param on productSearchV2 query
 
 ## [0.53.0] - 2020-03-25
 ### Added
 - Adds item metadata with assembly options
-
-### Added
-- `productSearchV3`, `facetsV2`, `searchMetadataV2`, `topSearches`, `suggestionProducts` and `suggestionSearches` queries.
 
 ## [0.52.1] - 2020-03-13
 - Make PWA Provider do a lazy query.

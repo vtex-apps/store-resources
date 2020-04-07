@@ -8,6 +8,7 @@ query productSearchV3(
   $hideUnavailableItems: Boolean = false
   $skusFilter: ItemsFilter = ALL_AVAILABLE
   $simulationBehavior: SimulationBehavior = default
+  $installmentCriteria: InstallmentsCriteria = MAX_WITHOUT_INTEREST
   $productOriginVtex: Boolean = false
   $fuzzy: String
   $operator: Operator
@@ -102,7 +103,7 @@ query productSearchV3(
                 }
               }
             }
-            Installments(criteria: MAX) {
+            Installments(criteria: $installmentCriteria) {
               Value
               InterestRate
               TotalValuePlusInterestRate
