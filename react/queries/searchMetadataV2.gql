@@ -10,5 +10,23 @@ query SearchMetadataV2(
   ) @context(provider: "vtex.search-graphql") {
     titleTag
     metaTagDescription
+    banners {
+      id
+      name
+      area
+      html
+    }
+    correction {
+      text
+      highlighted
+      misspelled
+      correction
+    }
+    suggestion {
+      searches {
+        term
+        count
+      }
+    }
   }
 }
