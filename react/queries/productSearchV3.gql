@@ -1,0 +1,158 @@
+query productSearchV3(
+  $query: String
+  $fullText: String
+  $selectedFacets: [SelectedFacetInput]
+  $orderBy: String
+  $from: Int
+  $to: Int
+  $hideUnavailableItems: Boolean = false
+  $skusFilter: ItemsFilter = ALL_AVAILABLE
+  $simulationBehavior: SimulationBehavior = default
+  $installmentCriteria: InstallmentsCriteria = MAX_WITHOUT_INTEREST
+  $productOriginVtex: Boolean = false
+  $fuzzy: String
+  $operator: Operator
+  $searchState: String
+) {
+  productSearch(
+    query: $query
+    fullText: $fullText
+    selectedFacets: $selectedFacets
+    orderBy: $orderBy
+    from: $from
+    to: $to
+    hideUnavailableItems: $hideUnavailableItems
+    simulationBehavior: $simulationBehavior
+    productOriginVtex: $productOriginVtex
+    fuzzy: $fuzzy
+    operator: $operator
+    searchState: $searchState
+  ) @context(provider: "vtex.search-graphql") {
+    products {
+      cacheId
+      productId
+      description
+      productName
+      productReference
+      linkText
+      brand
+      brandId
+      link
+      categories
+      priceRange {
+        sellingPrice {
+          highPrice
+          lowPrice
+        }
+        listPrice {
+          highPrice
+          lowPrice
+        }
+      }
+      specificationGroups {
+        name
+        specifications {
+          name
+          values
+        }
+      }
+      items(filter: $skusFilter) {
+        itemId
+        name
+        nameComplete
+        complementName
+        ean
+        variations {
+          name
+          values
+        }
+        referenceId {
+          Key
+          Value
+        }
+        measurementUnit
+        unitMultiplier
+        images {
+          cacheId
+          imageId
+          imageLabel
+          imageTag
+          imageUrl
+          imageText
+        }
+        sellers {
+          sellerId
+          sellerName
+          commertialOffer {
+            discountHighlights {
+              name
+            }
+            teasers {
+              name
+              conditions {
+                minimumQuantity
+                parameters {
+                  name
+                  value
+                }
+              }
+              effects {
+                parameters {
+                  name
+                  value
+                }
+              }
+            }
+            Installments(criteria: $installmentCriteria) {
+              Value
+              InterestRate
+              TotalValuePlusInterestRate
+              NumberOfInstallments
+              Name
+            }
+            Price
+            ListPrice
+            PriceWithoutDiscount
+            RewardValue
+            PriceValidUntil
+            AvailableQuantity
+          }
+        }
+      }
+      productClusters {
+        id
+        name
+      }
+      properties {
+        name
+        values
+      }
+    }
+    recordsFiltered
+    suggestion {
+      searches {
+        term
+        count
+      }
+    }
+    correction {
+      text
+      highlighted
+      misspelled
+      correction
+    }
+    breadcrumb {
+      name
+      href
+    }
+    fuzzy
+    operator
+    searchState
+    banners {
+      id
+      name
+      area
+      html
+    }
+  }
+}

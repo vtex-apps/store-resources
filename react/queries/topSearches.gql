@@ -1,0 +1,7 @@
+query topSearches {
+  topSearches @context(provider: "vtex.search-graphql") {
+    searches {
+      term
+    }
+  }
+}

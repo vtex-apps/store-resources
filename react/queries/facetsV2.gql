@@ -1,0 +1,92 @@
+query facetsV2(
+  $query: String
+  $fullText: String
+  $selectedFacets: [SelectedFacetInput]
+  $hideUnavailableItems: Boolean = false
+  $behavior: String = "Static"
+  $fuzzy: String
+  $operator: Operator
+  $searchState: String
+) {
+  facets(
+    query: $query
+    fullText: $fullText
+    selectedFacets: $selectedFacets
+    hideUnavailableItems: $hideUnavailableItems
+    behavior: $behavior
+    fuzzy: $fuzzy
+    operator: $operator
+    searchState: $searchState
+  ) @context(provider: "vtex.search-graphql") {
+    facets {
+      name
+      type
+      facets: values {
+        id
+        quantity
+        name
+        key
+        selected
+        value
+        link
+        linkEncoded
+        href
+        range {
+          from
+          to
+        }
+        children {
+          id
+          quantity
+          name
+          key
+          selected
+          value
+          link
+          linkEncoded
+          href
+          children {
+            id
+            quantity
+            name
+            key
+            selected
+            value
+            link
+            linkEncoded
+            href
+            children {
+              id
+              quantity
+              name
+              key
+              selected
+              value
+              link
+              linkEncoded
+              href
+              children {
+                id
+                quantity
+                name
+                key
+                selected
+                value
+                link
+                linkEncoded
+                href
+              }
+            }
+          }
+        }
+      }
+    }
+    queryArgs {
+      query
+      selectedFacets {
+        key
+        value
+      }
+    }
+  }
+}

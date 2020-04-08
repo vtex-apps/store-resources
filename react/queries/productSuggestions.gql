@@ -1,0 +1,113 @@
+query productSuggestions(
+  $fullText: String!
+  $facetKey: String
+  $facetValue: String
+) {
+  productSuggestions(
+    fullText: $fullText
+    facetKey: $facetKey
+    facetValue: $facetValue
+  ) @context(provider: "vtex.search-graphql") {
+    count
+     products {
+      cacheId
+      productId
+      description
+      productName
+      productReference
+      linkText
+      brand
+      brandId
+      link
+      categories
+      priceRange {
+        sellingPrice {
+          highPrice
+          lowPrice
+        }
+        listPrice {
+          highPrice
+          lowPrice
+        }
+      }
+      specificationGroups {
+        name
+        specifications {
+          name
+          values
+        }
+      }
+      items {
+        itemId
+        name
+        nameComplete
+        complementName
+        ean
+        variations {
+          name
+          values
+        }
+        referenceId {
+          Key
+          Value
+        }
+        measurementUnit
+        unitMultiplier
+        images {
+          cacheId
+          imageId
+          imageLabel
+          imageTag
+          imageUrl
+          imageText
+        }
+        sellers {
+          sellerId
+          sellerName
+          commertialOffer {
+            discountHighlights {
+              name
+            }
+            teasers {
+              name
+              conditions {
+                minimumQuantity
+                parameters {
+                  name
+                  value
+                }
+              }
+              effects {
+                parameters {
+                  name
+                  value
+                }
+              }
+            }
+            Installments {
+              Value
+              InterestRate
+              TotalValuePlusInterestRate
+              NumberOfInstallments
+              Name
+            }
+            Price
+            ListPrice
+            PriceWithoutDiscount
+            RewardValue
+            PriceValidUntil
+            AvailableQuantity
+          }
+        }
+      }
+      productClusters {
+        id
+        name
+      }
+      properties {
+        name
+        values
+      }
+    }
+  }
+}
