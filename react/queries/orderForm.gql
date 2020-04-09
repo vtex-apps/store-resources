@@ -1,6 +1,7 @@
 query orderForm {
   orderForm {
     cacheId
+    sellers
     orderFormId
     userProfileId
     customData {
