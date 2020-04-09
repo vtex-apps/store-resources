@@ -25,6 +25,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.55.0] - 2020-04-08
 ### Added
+- Adds `sellers` attribute for the orderForm query
+### Added
 - `productSearchV3`, `facetsV2`, `searchMetadataV2`, `topSearches`, `suggestionProducts` and `suggestionSearches` queries.
 
 ## [0.54.0] - 2020-03-26
