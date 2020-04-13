@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.56.0] - 2020-04-13
+## [0.56.0] - 2020-04-13 [YANKED]
 ### Added
 -  `spotPrice` on the `product` query.
 
