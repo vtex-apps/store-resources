@@ -38,7 +38,13 @@ query productSearchV3(
       brand
       brandId
       link
+      categoryId
       categories
+      categoryTree {
+        id
+        name
+        href
+      }
       priceRange {
         sellingPrice {
           highPrice
