@@ -88,6 +88,7 @@ query Product(
           PriceValidUntil
           AvailableQuantity
           Tax
+          taxPercentage
           CacheVersionUsedToCallCheckout
           Installments {
             Value
