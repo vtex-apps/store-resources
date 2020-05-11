@@ -1,0 +1,10 @@
+query correction($fullText: String) {
+  correction(fullText: $fullText) @context(provider: "vtex.search-graphql") {
+    correction {
+      text
+      highlighted
+      misspelled
+      correction
+    }
+  }
+}
