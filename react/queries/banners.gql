@@ -1,0 +1,11 @@
+query banners($fullText: String, $selectedFacets: [SelectedFacetInput]) {
+  banners(fullText: $fullText, selectedFacets: $selectedFacets)
+    @context(provider: "vtex.search-graphql") {
+    banners {
+      id
+      name
+      area
+      html
+    }
+  }
+}

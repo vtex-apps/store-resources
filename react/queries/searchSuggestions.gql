@@ -1,13 +1,9 @@
-query searchSuggestions($fullText: String!) {
-  searchSuggestions(fullText: $fullText)
+query searchSuggestions($fullText: String, $selectedFacets: [SelectedFacetInput]) {
+  searchSuggestions(fullText: $fullText, selectedFacets: $selectedFacets)
     @context(provider: "vtex.search-graphql") {
     searches {
       term
-      attributes {
-        key
-        value
-        labelValue
-      }
+      count
     }
   }
 }

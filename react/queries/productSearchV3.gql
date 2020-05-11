@@ -129,18 +129,6 @@ query productSearchV3(
       }
     }
     recordsFiltered
-    suggestion {
-      searches {
-        term
-        count
-      }
-    }
-    correction {
-      text
-      highlighted
-      misspelled
-      correction
-    }
     breadcrumb {
       name
       href
@@ -148,11 +136,5 @@ query productSearchV3(
     fuzzy
     operator
     searchState
-    banners {
-      id
-      name
-      area
-      html
-    }
   }
 }

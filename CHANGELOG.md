@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+- Remove `suggestions`, `correction` and `banners` from `productSearchV3` and create a query for each one.
+
 ## [0.57.0] - 2020-05-08
 ### Added
 -  `taxPercentage` on the `product` query.
