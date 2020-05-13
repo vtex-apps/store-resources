@@ -1,5 +1,5 @@
-query searchSuggestions($fullText: String, $selectedFacets: [SelectedFacetInput]) {
-  searchSuggestions(fullText: $fullText, selectedFacets: $selectedFacets)
+query searchSuggestions($fullText: String!) {
+  searchSuggestions(fullText: $fullText)
     @context(provider: "vtex.search-graphql") {
     searches {
       term
