@@ -6,7 +6,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { Helmet } from 'vtex.render-runtime'
+import { Helmet, useRuntime } from 'vtex.render-runtime'
 import { graphql } from 'react-apollo'
 import { usePixel } from 'vtex.pixel-manager/PixelContext'
 
@@ -17,6 +17,7 @@ const PWAContext = React.createContext(null)
 const PWAProvider = ({ rootPath, children, data = {} }) => {
   const { manifest, iOSIcons, splashes, pwaSettings, loading, error } = data
   const { push } = usePixel()
+  const { workspace } = useRuntime()
 
   const deferredPrompt = useRef(null)
   /* beforeinstallprompt event is fired even after the userChoice is to cancel (and there is no need to re-render) */
@@ -96,6 +97,8 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
 
   const hasManifest = !loading && manifest && !error
 
+  const manifestHrefSuffix = workspace === 'master' ? '' : `?workspace=${workspace}`
+
   return (
     <PWAContext.Provider value={context}>
       {hasManifest && (
@@ -107,7 +110,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
           link={[
             {
               rel: 'manifest',
-              href: `${rootPath}/pwa/manifest.json`,
+              href: `${rootPath}/pwa/manifest.json${manifestHrefSuffix}`,
             },
             ...(iOSIcons
               ? iOSIcons.map(icon => ({
