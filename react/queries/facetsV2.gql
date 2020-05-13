@@ -35,6 +35,7 @@ query facetsV2(
           from
           to
         }
+        visible
         children {
           id
           quantity
