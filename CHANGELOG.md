@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `productId` on the `orderForm` query.
 
 ## [0.58.1] - 2020-05-13
 ### Fixed
@@ -13,11 +15,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.58.0] - 2020-05-12
 ### Added
-- Adds `sellers` attribute for the orderForm query
+- Adds `sellers` attribute for the orderForm query.
 
 ## [0.57.0] - 2020-05-08
 ### Added
--  `taxPercentage` on the `product` query.
+- `taxPercentage` on the `product` query.
 
 ## [0.56.2] - 2020-04-20
 ### Fixed
