@@ -10,6 +10,7 @@ mutation addItem($orderFormId: String, $items: [OrderFormItemInput], $utmParams:
     }
     items {
       id
+      productId
       name
       imageUrl
       detailUrl
