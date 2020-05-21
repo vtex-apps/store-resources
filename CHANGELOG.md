@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Add hidden property to facets.
+
 ## [0.60.0] - 2020-06-02
 ### Added
 - `taxPercentage` and `Tax` on `products`, `productSearch`, `productSearchV2` and `productSearchV3` queries.
