@@ -27,7 +27,7 @@ query productSearchV3(
     fuzzy: $fuzzy
     operator: $operator
     searchState: $searchState
-  ) @context(provider: "vtex.search-graphql") {
+  ) @context(provider: "vtex.search-graphql-test") {
     products {
       cacheId
       productId
