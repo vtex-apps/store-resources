@@ -17,7 +17,11 @@ query facetsV2(
     fuzzy: $fuzzy
     operator: $operator
     searchState: $searchState
-  ) @context(provider: "vtex.search-graphql") {
+  ) @context(provider: "vtex.search-graphql-test") {
+    breadcrumb {
+      name
+      href
+    }
     facets {
       name
       type
