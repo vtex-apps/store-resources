@@ -1,0 +1,6 @@
+query redirect($fullText: String, $selectedFacets: [SelectedFacetInput]) {
+  redirect(fullText: $fullText, selectedFacets: $selectedFacets)
+    @context(provider: "vtex.search-graphql") {
+    url
+  }
+}
