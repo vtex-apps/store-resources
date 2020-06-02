@@ -21,6 +21,7 @@ query facetsV2(
     facets {
       name
       type
+      hidden
       facets: values {
         id
         quantity
