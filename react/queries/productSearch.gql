@@ -53,6 +53,8 @@ query productSearch(
           }
           Price
           ListPrice
+          Tax
+          taxPercentage
           PriceWithoutDiscount
           RewardValue
           PriceValidUntil
