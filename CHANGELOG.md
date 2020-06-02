@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.60.1] - 2020-06-02
+
 ### Added
 - Add hidden property to facets.
 
