@@ -94,6 +94,10 @@ query Products(
       id
       name
     }
+    clusterHighlights {
+      id
+      name
+    }
     properties {
       name
       values
