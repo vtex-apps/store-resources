@@ -1,3 +1,3 @@
-import banners from './queries/banners.gql'
+import banners from './queries/redirect.gql'
 
 export default banners
