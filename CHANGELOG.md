@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
-- Redirect query.
+- Redirect field to `productSearch`.
 - Breadcrumb to `facets`.
 
 ### Changed

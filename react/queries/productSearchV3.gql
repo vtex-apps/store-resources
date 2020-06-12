@@ -138,5 +138,6 @@ query productSearchV3(
     fuzzy
     operator
     searchState
+    redirect
   }
 }
