@@ -3,11 +3,7 @@ query searchSuggestions($fullText: String!) {
     @context(provider: "vtex.search-graphql") {
     searches {
       term
-      attributes {
-        key
-        value
-        labelValue
-      }
+      count
     }
   }
 }

@@ -18,6 +18,10 @@ query facetsV2(
     operator: $operator
     searchState: $searchState
   ) @context(provider: "vtex.search-graphql") {
+    breadcrumb {
+      name
+      href
+    }
     facets {
       name
       type
