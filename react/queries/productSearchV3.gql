@@ -121,6 +121,14 @@ query productSearchV3(
           }
         }
       }
+      skuSpecifications {
+        field {
+          name
+        }
+        values {
+          name
+        }
+      }
       productClusters {
         id
         name
