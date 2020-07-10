@@ -137,6 +137,10 @@ query productSearchV3(
         name
         values
       }
+      selectedProperties {
+        key
+        value
+      }
     }
     recordsFiltered
     breadcrumb {
