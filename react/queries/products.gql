@@ -78,6 +78,7 @@ query Products(
           ListPrice
           Tax
           taxPercentage
+          spotPrice
           teasers {
             name
           }
