@@ -114,6 +114,7 @@ query productSearchV3(
             ListPrice
             Tax
             taxPercentage
+            spotPrice
             PriceWithoutDiscount
             RewardValue
             PriceValidUntil
