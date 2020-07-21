@@ -21,8 +21,10 @@ query ProductBenefits($slug: String, $identifier: ProductUniqueIdentifier) {
           }
           specificationGroups {
             name
+            originalName
             specifications {
               name
+              originalName
               values
             }
           }

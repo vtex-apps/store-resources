@@ -52,8 +52,10 @@ query productSearchV2(
       }
       specificationGroups {
         name
+        originalName
         specifications {
           name
+          originalName
           values
         }
       }

@@ -40,8 +40,10 @@ query Products(
     }
     specificationGroups {
       name
+      originalName
       specifications {
         name
+        originalName
         values
       }
     }
