@@ -28,8 +28,10 @@ query Product(
     }
     specificationGroups {
       name
+      originalName
       specifications {
         name
+        originalName
         values
       }
     }
@@ -175,9 +177,11 @@ query Product(
     skuSpecifications {
       field {
         name
+        originalName
       }
       values {
         name
+        originalName
       }
     }
     itemMetadata {
