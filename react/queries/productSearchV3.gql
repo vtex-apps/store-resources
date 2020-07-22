@@ -148,6 +148,9 @@ query productSearchV3(
       }
     }
     recordsFiltered
+    correction {
+      misspelled
+    }
     breadcrumb {
       name
       href
