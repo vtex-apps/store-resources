@@ -92,6 +92,7 @@ query productSuggestions(
               TotalValuePlusInterestRate
               NumberOfInstallments
               Name
+              PaymentSystemName
             }
             Price
             ListPrice

@@ -98,6 +98,7 @@ query Product(
             TotalValuePlusInterestRate
             NumberOfInstallments
             Name
+            PaymentSystemName
           }
         }
       }
@@ -162,6 +163,7 @@ query Product(
                 TotalValuePlusInterestRate
                 NumberOfInstallments
                 Name
+                PaymentSystemName
               }
             }
           }
