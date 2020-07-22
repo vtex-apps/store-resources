@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Add `correction` to `productSearchV3`.
+
 ## [0.65.0] - 2020-07-21
 ### Added
 - `originalName` field to `specificationGroups`, `specifications`, `skuSpecifications.field` and `skuSpecifications.values` of `product`, `products`, `productBenefits`, `productSearchV2`, `productSearchV3`, and `productSuggestions` query.
