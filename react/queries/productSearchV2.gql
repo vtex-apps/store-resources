@@ -112,6 +112,7 @@ query productSearchV2(
               TotalValuePlusInterestRate
               NumberOfInstallments
               Name
+              PaymentSystemName
             }
             Price
             ListPrice

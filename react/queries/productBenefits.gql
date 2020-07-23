@@ -67,6 +67,7 @@ query ProductBenefits($slug: String, $identifier: ProductUniqueIdentifier) {
                   TotalValuePlusInterestRate
                   NumberOfInstallments
                   Name
+                  PaymentSystemName
                 }
               }
             }
