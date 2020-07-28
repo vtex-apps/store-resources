@@ -3,12 +3,14 @@ query productSuggestions(
   $facetKey: String
   $facetValue: String
   $productOriginVtex: Boolean = false
+  $simulationBehavior: SimulationBehavior = default
 ) {
   productSuggestions(
     fullText: $fullText
     facetKey: $facetKey
     facetValue: $facetValue
     productOriginVtex: $productOriginVtex
+    simulationBehavior: $simulationBehavior
   ) @context(provider: "vtex.search-graphql") {
     count
      products {
