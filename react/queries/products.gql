@@ -66,6 +66,7 @@ query Products(
       }
       sellers {
         sellerId
+        sellerName
         commertialOffer {
           Installments(criteria: $installmentCriteria) {
             Value
