@@ -100,6 +100,8 @@ query productSuggestions(
             }
             Price
             ListPrice
+            Tax
+            taxPercentage
             PriceWithoutDiscount
             RewardValue
             PriceValidUntil
@@ -108,6 +110,10 @@ query productSuggestions(
         }
       }
       productClusters {
+        id
+        name
+      }
+      clusterHighlights {
         id
         name
       }

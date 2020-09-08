@@ -1,0 +1,30 @@
+fragment CommertialOfferFragment on Offer {
+  discountHighlights {
+    name
+  }
+  teasers {
+    name
+    conditions {
+      minimumQuantity
+      parameters {
+        name
+        value
+      }
+    }
+    effects {
+      parameters {
+        name
+        value
+      }
+    }
+  }
+  Price
+  ListPrice
+  Tax
+  taxPercentage
+  spotPrice
+  PriceWithoutDiscount
+  RewardValue
+  PriceValidUntil
+  AvailableQuantity
+}

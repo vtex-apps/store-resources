@@ -1,0 +1,25 @@
+fragment ItemFragment on SKU {
+  itemId
+  name
+  nameComplete
+  complementName
+  ean
+  variations {
+    name
+    values
+  }
+  referenceId {
+    Key
+    Value
+  }
+  measurementUnit
+  unitMultiplier
+  images {
+    cacheId
+    imageId
+    imageLabel
+    imageTag
+    imageUrl
+    imageText
+  }
+}

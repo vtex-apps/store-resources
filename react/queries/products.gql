@@ -1,3 +1,9 @@
+#import '../fragments/product.graphql'
+#import '../fragments/item.graphql'
+#import '../fragments/seller.graphql'
+#import '../fragments/commertialOffer.graphql'
+#import '../fragments/installment.graphql'
+
 query Products(
   $category: String
   $collection: String
@@ -18,98 +24,18 @@ query Products(
     to: $to
     hideUnavailableItems: $hideUnavailableItems
   ) @context(provider: "vtex.search-graphql") {
-    cacheId
-    productId
-    productName
-    productReference
-    description
-    link
-    linkText
-    brand
-    brandId
-    categories
-    priceRange {
-      sellingPrice {
-        highPrice
-        lowPrice
-      }
-      listPrice {
-        highPrice
-        lowPrice
-      }
-    }
-    specificationGroups {
-      name
-      originalName
-      specifications {
-        name
-        originalName
-        values
-      }
-    }
+    ...ProductFragment
     items(filter: $skusFilter) {
-      name
-      itemId
-      measurementUnit
-      unitMultiplier
-      referenceId {
-        Value
-      }
-      images {
-        imageUrl
-        imageTag
-        imageLabel
-      }
-      variations {
-        name
-        values
-      }
+      ...ItemFragment
       sellers {
-        sellerId
+        ...SellerFragment
         commertialOffer {
+          ...CommertialOfferFragment
           Installments(criteria: $installmentCriteria) {
-            Value
-            InterestRate
-            TotalValuePlusInterestRate
-            NumberOfInstallments
-            Name
-          }
-          AvailableQuantity
-          Price
-          PriceWithoutDiscount
-          ListPrice
-          Tax
-          taxPercentage
-          spotPrice
-          teasers {
-            name
-            conditions {
-              minimumQuantity
-              parameters {
-                name
-                value
-              }
-            }
-            effects {
-              parameters {
-                name
-                value
-              }
-            }
-          }
-          discountHighlights {
-            name
+            ...InstallmentFragment
           }
         }
       }
-    }
-    productClusters {
-      id
-      name
-    }
-    properties {
-      name
-      values
     }
   }
 }
