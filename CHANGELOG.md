@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Add new fields to the teasers from the `products` query.
+
 ## [0.68.0] - 2020-08-12
 
 ### Added

@@ -83,6 +83,19 @@ query Products(
           spotPrice
           teasers {
             name
+            conditions {
+              minimumQuantity
+              parameters {
+                name
+                value
+              }
+            }
+            effects {
+              parameters {
+                name
+                value
+              }
+            }
           }
           discountHighlights {
             name
