@@ -1,0 +1,27 @@
+#import '../fragments/product.graphql'
+#import '../fragments/item.graphql'
+#import '../fragments/seller.graphql'
+#import '../fragments/commertialOffer.graphql'
+#import '../fragments/installment.graphql'
+
+query ProductRecommendations(
+  $identifier: ProductUniqueIdentifier
+  $type: CrossSelingInputEnum
+) {
+  productRecommendations(identifier: $identifier, type: $type)
+    @context(provider: "vtex.search-graphql") {
+    ...ProductFragment
+    items {
+      ...ItemFragment
+      sellers {
+        ...SellerFragment
+        commertialOffer {
+          ...CommertialOfferFragment
+          Installments(criteria: MAX) {
+            ...InstallmentFragment
+          }
+        }
+      }
+    }
+  }
+}
