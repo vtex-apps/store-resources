@@ -13,6 +13,8 @@ query productSearchV3(
   $fuzzy: String
   $operator: Operator
   $searchState: String
+  $excludedPaymentSystems: [String]
+  $includedPaymentSystems: [String]
 ) {
   productSearch(
     query: $query
@@ -105,7 +107,11 @@ query productSearchV3(
                 }
               }
             }
-            Installments(criteria: $installmentCriteria) {
+            Installments(
+              criteria: $installmentCriteria
+              excludedPaymentSystems: $excludedPaymentSystems
+              includedPaymentSystems: $includedPaymentSystems
+            ) {
               Value
               InterestRate
               TotalValuePlusInterestRate
