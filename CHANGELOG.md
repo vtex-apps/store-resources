@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.71.0] - 2020-09-22
+### Added
+- Add new fields to the SKU from the `products` query.
+
 ## [0.70.0] - 2020-09-18
 ### Added
 - `excludedPaymentSystems` and `includedPaymentSystems` arguments to `productSearchV3` query.
