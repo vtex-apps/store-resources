@@ -7,6 +7,8 @@ query facetsV2(
   $fuzzy: String
   $operator: Operator
   $searchState: String
+  $from: Int
+  $to: Int
 ) {
   facets(
     query: $query
@@ -26,7 +28,8 @@ query facetsV2(
       name
       type
       hidden
-      facets: values {
+      quantity
+      facets: values (from: $from, to: $to) {
         id
         quantity
         name
