@@ -1,0 +1,53 @@
+fragment ProductFragment on Product {
+  cacheId
+  productId
+  description
+  productName
+  productReference
+  linkText
+  brand
+  brandId
+  link
+  categories
+  priceRange {
+    sellingPrice {
+      highPrice
+      lowPrice
+    }
+    listPrice {
+      highPrice
+      lowPrice
+    }
+  }
+  specificationGroups {
+    name
+    originalName
+    specifications {
+      name
+      originalName
+      values
+    }
+  }
+  skuSpecifications {
+    field {
+      name
+      originalName
+    }
+    values {
+      name
+      originalName
+    }
+  }
+  productClusters {
+    id
+    name
+  }
+  clusterHighlights {
+    id
+    name
+  }
+  properties {
+    name
+    values
+  }
+}

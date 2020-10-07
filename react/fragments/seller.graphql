@@ -1,0 +1,4 @@
+fragment SellerFragment on Seller {
+  sellerId
+  sellerName
+}

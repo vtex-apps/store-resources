@@ -1,0 +1,8 @@
+fragment InstallmentFragment on Installment {
+  Value
+  InterestRate
+  TotalValuePlusInterestRate
+  NumberOfInstallments
+  Name
+  PaymentSystemName
+}
