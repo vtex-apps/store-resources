@@ -7,6 +7,7 @@
 query productSearchV3(
   $query: String
   $fullText: String
+  $category: String
   $selectedFacets: [SelectedFacetInput]
   $orderBy: String
   $from: Int
@@ -25,6 +26,7 @@ query productSearchV3(
   productSearch(
     query: $query
     fullText: $fullText
+    category: $category
     selectedFacets: $selectedFacets
     orderBy: $orderBy
     from: $from
