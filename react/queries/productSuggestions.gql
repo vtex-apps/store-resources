@@ -13,7 +13,9 @@ query productSuggestions(
     simulationBehavior: $simulationBehavior
   ) @context(provider: "vtex.search-graphql") {
     count
-     products {
+    misspelled
+    operator
+    products {
       cacheId
       productId
       description
