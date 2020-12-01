@@ -1,5 +1,5 @@
 query orderForm {
-  orderForm {
+  orderForm @context(scope: "private") {
     cacheId
     sellers {
       id
