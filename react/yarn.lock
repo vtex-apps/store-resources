@@ -563,9 +563,13 @@ typescript@3.9.7:
   version "8.126.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.1/public/@types/vtex.render-runtime#3c1b8e2f331ca7d3eaeda2f09a6509243e8f9e67"
 
-"vtex.search-graphql@https://summary--storecomponents.myvtex.com/_v/private/typings/linked/v1/vtex.search-graphql@0.36.0+build1606861555/public/@types/vtex.search-graphql":
+"vtex.search-graphql@https://summary--storecomponents.myvtex.com/_v/private/typings/linked/v1/vtex.search-graphql@0.36.0+build1606872396/public/@types/vtex.search-graphql":
   version "0.36.0"
-  resolved "https://summary--storecomponents.myvtex.com/_v/private/typings/linked/v1/vtex.search-graphql@0.36.0+build1606861555/public/@types/vtex.search-graphql#053156d37cbd229e61f6635b61daf92446bb6c1f"
+  resolved "https://summary--storecomponents.myvtex.com/_v/private/typings/linked/v1/vtex.search-graphql@0.36.0+build1606872396/public/@types/vtex.search-graphql#d311c28d327ed1aae78cf20fee5740726f6dc2e5"
+
+"vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.136.4/public/@types/vtex.store-graphql":
+  version "2.136.4"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.136.4/public/@types/vtex.store-graphql#a201c4c9ed3edc3fcccb8e09e67b536c2fcd7307"
 
 zen-observable-ts@^0.8.21:
   version "0.8.21"

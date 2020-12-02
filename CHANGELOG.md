@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - New hook `useQueryProducts`.
+- Types for `QueryProducts` on `QueryProductsTypes` module.
 
 ## [0.74.1] - 2020-12-01
 ### Added

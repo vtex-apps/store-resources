@@ -19,6 +19,7 @@
     "vtex.pixel-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.4.0/public/@types/vtex.pixel-manager",
     "vtex.pwa-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pwa-graphql@1.15.6/public/@types/vtex.pwa-graphql",
     "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.1/public/@types/vtex.render-runtime",
-    "vtex.search-graphql": "https://summary--storecomponents.myvtex.com/_v/private/typings/linked/v1/vtex.search-graphql@0.36.0+build1606861555/public/@types/vtex.search-graphql"
+    "vtex.search-graphql": "https://summary--storecomponents.myvtex.com/_v/private/typings/linked/v1/vtex.search-graphql@0.36.0+build1606872396/public/@types/vtex.search-graphql",
+    "vtex.store-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.136.4/public/@types/vtex.store-graphql"
   }
 }
