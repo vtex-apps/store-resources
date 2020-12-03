@@ -26,10 +26,10 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
   const [alreadyInstalled, setAlreadyInstalled] = useState(false)
   const [installDismissed, setInstallDismissed] = useState(false)
 
-
   useEffect(() => {
     const handleBeforeInstall = e => {
       const { promptOnCustomEvent, disablePrompt } = pwaSettings
+
       if (promptOnCustomEvent !== 'default' && !captured.current) {
         e.preventDefault()
 
@@ -39,22 +39,30 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
 
         deferredPrompt.current = e
         captured.current = true
+
         return false
       }
+
       return true
     }
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstall)
+
     return () =>
       window.removeEventListener('beforeinstallprompt', handleBeforeInstall)
   }, [captured, pwaSettings])
 
-  useEffect( () => {
+  useEffect(() => {
     const webAppInstalled = localStorage.getItem('webAppInstalled')
+
     if (webAppInstalled) {
       setAlreadyInstalled(webAppInstalled)
     }
-    const webAppInstallDismissed = localStorage.getItem('webAppInstallDismissed')
+
+    const webAppInstallDismissed = localStorage.getItem(
+      'webAppInstallDismissed'
+    )
+
     if (webAppInstallDismissed) {
       setInstallDismissed(webAppInstallDismissed)
     }
@@ -62,6 +70,7 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
 
   const showInstallPrompt = useCallback(() => {
     const prompt = deferredPrompt.current
+
     if (prompt) {
       prompt.prompt()
       prompt.userChoice.then(choiceResult => {
@@ -70,34 +79,39 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
         } else {
           localStorage.setItem('webAppInstallDismissed', 'true')
         }
+
         push({
           event: 'installWebApp',
-          userChoice: choiceResult.outcome
+          userChoice: choiceResult.outcome,
         })
         deferredPrompt.current = null
       })
     }
   }, [])
 
-  const context = useMemo( () => {
+  const context = useMemo(() => {
     if (pwaSettings) {
       const { disablePrompt, promptOnCustomEvent } = pwaSettings
       /* browsers for ios devices doesn't support install prompt */
-      const isIOS = navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
+      const isIOS =
+        navigator && !!navigator.userAgent.match(/(iPod|iPhone|iPad)/)
 
       return {
         showInstallPrompt,
         settings: {
-          promptOnCustomEvent: (disablePrompt || isIOS || installDismissed || alreadyInstalled) ? '' 
-            : promptOnCustomEvent
-        }
+          promptOnCustomEvent:
+            disablePrompt || isIOS || installDismissed || alreadyInstalled
+              ? ''
+              : promptOnCustomEvent,
+        },
       }
     }
   }, [showInstallPrompt, pwaSettings, alreadyInstalled])
 
   const hasManifest = !loading && manifest && !error
 
-  const manifestHrefSuffix = workspace === 'master' ? '' : `?workspace=${workspace}`
+  const manifestHrefSuffix =
+    workspace === 'master' ? '' : `?workspace=${workspace}`
 
   return (
     <PWAContext.Provider value={context}>
@@ -114,17 +128,17 @@ const PWAProvider = ({ rootPath, children, data = {} }) => {
             },
             ...(iOSIcons
               ? iOSIcons.map(icon => ({
-                rel: 'apple-touch-icon',
-                sizes: icon.sizes,
-                href: `${rootPath}${icon.src}`,
-              }))
+                  rel: 'apple-touch-icon',
+                  sizes: icon.sizes,
+                  href: `${rootPath}${icon.src}`,
+                }))
               : []),
             ...(splashes
               ? splashes.map(splash => ({
-                href: `${rootPath}${splash.src}`,
-                sizes: splash.sizes,
-                rel: 'apple-touch-startup-image',
-              }))
+                  href: `${rootPath}${splash.src}`,
+                  sizes: splash.sizes,
+                  rel: 'apple-touch-startup-image',
+                }))
               : []),
           ].filter(Boolean)}
         />
@@ -144,4 +158,8 @@ const options = {
   }),
 }
 
-export default { PWAContext, PWAProvider: graphql(pwaData, options)(PWAProvider), usePWA }
+export default {
+  PWAContext,
+  PWAProvider: graphql(pwaData, options)(PWAProvider),
+  usePWA,
+}

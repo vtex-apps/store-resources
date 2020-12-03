@@ -6,19 +6,18 @@ const OrderFormContext = React.createContext({})
 const { Provider } = OrderFormContext
 
 function orderFormConsumer(WrappedComponent) {
-  const WithOrderForm = (props) => {
+  const WithOrderForm = props => {
     const { orderFormContext } = useContext(OrderFormContext)
+
     return <WrappedComponent {...props} orderFormContext={orderFormContext} />
   }
-  WithOrderForm.displayName = `OrderFormContext(${Component.displayName ||
-    Component.name ||
-    'Component'})`
+
+  WithOrderForm.displayName = `OrderFormContext(${
+    Component.displayName || Component.name || 'Component'
+  })`
   WithOrderForm.WrappedComponent = WrappedComponent
-  
-  return hoistNonReactStatics(
-    WithOrderForm,
-    WrappedComponent
-  )
+
+  return hoistNonReactStatics(WithOrderForm, WrappedComponent)
 }
 
 const useOrderForm = () => {
@@ -34,7 +33,7 @@ const contextPropTypes = PropTypes.shape({
     isSuccess: PropTypes.bool,
     message: PropTypes.string,
   }).isRequired,
-  /* Is information still loading*/
+  /* Is information still loading */
 
   loading: PropTypes.bool.isRequired,
   /* Function to refetch the orderForm query */
@@ -46,10 +45,10 @@ const contextPropTypes = PropTypes.shape({
   /* Function to update the orderForm */
 
   updateOrderForm: PropTypes.func.isRequired,
-  /* Function to update the orderForm profile data*/
+  /* Function to update the orderForm profile data */
 
   updateOrderFormProfile: PropTypes.func.isRequired,
-  /* Function to update the orderForm and refetch the data*/
+  /* Function to update the orderForm and refetch the data */
 
   updateAndRefetchOrderForm: PropTypes.func.isRequired,
   /* Function to update the message */
@@ -76,9 +75,9 @@ const contextPropTypes = PropTypes.shape({
       customApps: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string,
-          fields: PropTypes.object
+          fields: PropTypes.object,
         })
-      )
+      ),
     }),
     /* Shipping Address */
 

@@ -1,14 +1,15 @@
-import { ItemsFilter, InstallmentsCriteria } from 'vtex.search-graphql'
+import type { ItemsFilter, InstallmentsCriteria } from 'vtex.search-graphql'
 
-import ProductType, { ProductFragment } from './fragments/ProductType'
-import ItemType, { SkuFragment } from './fragments/ItemType'
-import SellerType, { SellerFragment } from './fragments/SellerType'
-import CommertialOfferType, {
-  CommertialOfferFragment,
-} from './fragments/CommertialOfferType'
-import InstallmentType, {
-  InstallmentFragment,
-} from './fragments/InstallmentType'
+import type { ProductFragment } from './fragments/ProductType'
+import ProductType from './fragments/ProductType'
+import type { SkuFragment } from './fragments/ItemType'
+import ItemType from './fragments/ItemType'
+import type { SellerFragment } from './fragments/SellerType'
+import SellerType from './fragments/SellerType'
+import type { CommertialOfferFragment } from './fragments/CommertialOfferType'
+import CommertialOfferType from './fragments/CommertialOfferType'
+import type { InstallmentFragment } from './fragments/InstallmentType'
+import InstallmentType from './fragments/InstallmentType'
 
 type Installment = {
   Installments: InstallmentFragment[]
@@ -20,7 +21,7 @@ type Seller = SellerFragment & CommertialOffer
 
 type Item = SkuFragment & { sellers: Seller[] }
 
-export type Result = {
+export type Data = {
   products: Array<ProductFragment & { items: Item[] }>
 }
 
