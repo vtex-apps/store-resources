@@ -559,17 +559,17 @@ typescript@3.9.7:
   version "1.15.6"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pwa-graphql@1.15.6/public/@types/vtex.pwa-graphql#649a31eaa5536f8efbe92389d8a5be5f6078d966"
 
-"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.1/public/@types/vtex.render-runtime":
-  version "8.126.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.1/public/@types/vtex.render-runtime#3c1b8e2f331ca7d3eaeda2f09a6509243e8f9e67"
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.4-beta.1/public/@types/vtex.render-runtime":
+  version "8.126.4-beta.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.4-beta.1/public/@types/vtex.render-runtime#27e35991b2f5ebb376056584eda9ff3a88a5faf1"
 
-"vtex.search-graphql@https://summary--storecomponents.myvtex.com/_v/private/typings/linked/v1/vtex.search-graphql@0.36.0+build1606872396/public/@types/vtex.search-graphql":
-  version "0.36.0"
-  resolved "https://summary--storecomponents.myvtex.com/_v/private/typings/linked/v1/vtex.search-graphql@0.36.0+build1606872396/public/@types/vtex.search-graphql#d311c28d327ed1aae78cf20fee5740726f6dc2e5"
+"vtex.search-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.36.1/public/@types/vtex.search-graphql":
+  version "0.36.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.36.1/public/@types/vtex.search-graphql#2bf8943fb24c92bd7f044b0aad21ebbae3d54095"
 
-"vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.136.4/public/@types/vtex.store-graphql":
-  version "2.136.4"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.136.4/public/@types/vtex.store-graphql#a201c4c9ed3edc3fcccb8e09e67b536c2fcd7307"
+"vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.136.6/public/@types/vtex.store-graphql":
+  version "2.136.6"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.136.6/public/@types/vtex.store-graphql#d6235b2c478e9475755ce9adb4444fb12ebb25fc"
 
 zen-observable-ts@^0.8.21:
   version "0.8.21"
