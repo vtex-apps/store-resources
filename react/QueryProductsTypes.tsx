@@ -20,11 +20,11 @@ type Seller = SellerFragment & CommertialOffer
 
 type Item = SkuFragment & { sellers: Seller[] }
 
-export type ProductsQueryResult = {
+export type Result = {
   products: Array<ProductFragment & { items: Item[] }>
 }
 
-export type ProductQueryVariables = {
+export type Variables = {
   category?: string
   collection?: string
   specificationFilters?: string[]
