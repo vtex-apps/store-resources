@@ -9,6 +9,7 @@ fragment ProductFragment on Product {
   brandId
   link
   categories
+  categoryId
   priceRange {
     sellingPrice {
       highPrice
