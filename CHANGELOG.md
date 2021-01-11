@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- `hideUnavailableItems` to `productSuggestions` query.
+
 ## [0.75.2] - 2021-01-19 [YANKED]
 ### Added
 - `originalName` to `properties` on Product fragment.

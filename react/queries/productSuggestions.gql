@@ -4,6 +4,7 @@ query productSuggestions(
   $facetValue: String
   $productOriginVtex: Boolean = false
   $simulationBehavior: SimulationBehavior = default
+  $hideUnavailableItems: Boolean = false
 ) {
   productSuggestions(
     fullText: $fullText
@@ -11,6 +12,7 @@ query productSuggestions(
     facetValue: $facetValue
     productOriginVtex: $productOriginVtex
     simulationBehavior: $simulationBehavior
+    hideUnavailableItems: $hideUnavailableItems
   ) @context(provider: "vtex.search-graphql") {
     count
     misspelled
