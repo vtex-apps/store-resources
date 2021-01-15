@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- `connection` directive to the `productSearchV3`.
+
 ## [0.74.0] - 2020-11-13
 ### Added
 - `misspelled` and `operator` to the `productSuggestions` query.

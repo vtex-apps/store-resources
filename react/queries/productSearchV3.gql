@@ -35,7 +35,7 @@ query productSearchV3(
     fuzzy: $fuzzy
     operator: $operator
     searchState: $searchState
-  ) @context(provider: "vtex.search-graphql") {
+  ) @connection(key: "productSearch", filter: ["to", "from"]) @context(provider: "vtex.search-graphql")  {
     products {
       ...ProductFragment
       items(filter: $skusFilter) {
