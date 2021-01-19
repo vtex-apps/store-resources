@@ -1,5 +1,5 @@
 {
-  "version": "0.75.1",
+  "version": "0.75.2",
   "dependencies": {
     "apollo-client": "^2.6.8",
     "react": "^16.12.0",
