@@ -49,7 +49,6 @@ fragment ProductFragment on Product {
   }
   properties {
     name
-    originalName
     values
   }
 }
