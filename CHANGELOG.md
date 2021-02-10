@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+- Use fragments on `produtSuggestions` query.
+
 ## [0.76.0] - 2021-02-01
 
 ### Added
