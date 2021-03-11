@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Add `availableQuantity` to the `itemsWithSimulation` query.
+
 ## [0.77.0] - 2021-02-11
 
 ### Changed
