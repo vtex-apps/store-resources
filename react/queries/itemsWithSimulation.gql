@@ -3,6 +3,7 @@ query itemsWithSimulation($items: [ItemInput]) {
     itemId
     sellers {
       commertialOffer {
+        AvailableQuantity
         Price
         ListPrice
         PriceValidUntil
