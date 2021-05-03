@@ -1,0 +1,36 @@
+#import '../fragments/product.graphql'
+#import '../fragments/item.graphql'
+#import '../fragments/seller.graphql'
+#import '../fragments/commertialOffer.graphql'
+#import '../fragments/installment.graphql'
+
+fragment RecommendationProductFragment on Product {
+  ...ProductFragment
+  items {
+    ...ItemFragment
+    sellers {
+      ...SellerFragment
+      commertialOffer {
+        ...CommertialOfferFragment
+        Installments {
+          ...InstallmentFragment
+        }
+      }
+    }
+  }
+}
+
+query recommendation($input: RecommendationInput) {
+  recommendation(input: $input) @context(provider: "vtex.recommendation-graphql")  {
+    response {
+      recommendations {
+        base {
+          ...RecommendationProductFragment
+        }
+        recommended {
+          ...RecommendationProductFragment
+        }
+      }
+    }
+  }
+}
