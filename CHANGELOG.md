@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- `recommendationShelf` query.
+
 ## [0.79.0] - 2021-03-30
 ### Added
 - Field `sellerDefault` to `Seller` fragment.
