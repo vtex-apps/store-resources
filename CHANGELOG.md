@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.80.0] - 2021-05-03
+
 ### Added
 - `recommendationShelf` query.
 
