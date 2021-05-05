@@ -3,6 +3,7 @@ query facetsV2(
   $fullText: String
   $selectedFacets: [SelectedFacetInput]
   $hideUnavailableItems: Boolean = false
+  $disableRegionalization: Boolean = false
   $behavior: String = "Static"
   $fuzzy: String
   $operator: Operator
@@ -15,6 +16,7 @@ query facetsV2(
     fullText: $fullText
     selectedFacets: $selectedFacets
     hideUnavailableItems: $hideUnavailableItems
+    disableRegionalization: $disableRegionalization
     behavior: $behavior
     fuzzy: $fuzzy
     operator: $operator

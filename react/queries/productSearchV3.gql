@@ -12,6 +12,7 @@ query productSearchV3(
   $from: Int
   $to: Int
   $hideUnavailableItems: Boolean = false
+  $disableRegionalization: Boolean = false
   $skusFilter: ItemsFilter = ALL_AVAILABLE
   $simulationBehavior: SimulationBehavior = default
   $installmentCriteria: InstallmentsCriteria = MAX_WITHOUT_INTEREST
@@ -30,6 +31,7 @@ query productSearchV3(
     from: $from
     to: $to
     hideUnavailableItems: $hideUnavailableItems
+    disableRegionalization: $disableRegionalization
     simulationBehavior: $simulationBehavior
     productOriginVtex: $productOriginVtex
     fuzzy: $fuzzy
