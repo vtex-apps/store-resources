@@ -9,6 +9,7 @@ query facetsV2(
   $searchState: String
   $from: Int
   $to: Int
+  $initialAttributes: String
 ) {
   facets(
     query: $query
@@ -19,6 +20,7 @@ query facetsV2(
     fuzzy: $fuzzy
     operator: $operator
     searchState: $searchState
+    initialAttributes: $initialAttributes
   ) @context(provider: "vtex.search-graphql") {
     breadcrumb {
       name
