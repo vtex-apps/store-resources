@@ -24,6 +24,7 @@ query facetsV2(
     searchState: $searchState
     initialAttributes: $initialAttributes
   ) @context(provider: "vtex.search-graphql") {
+    sampling
     breadcrumb {
       name
       href

@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- `sampling` to `FacetsV2` query.
+
 ## [0.82.0] - 2021-07-14
 
 ### Added
