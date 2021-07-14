@@ -4,6 +4,7 @@ query facetsV2(
   $selectedFacets: [SelectedFacetInput]
   $hideUnavailableItems: Boolean = false
   $behavior: String = "Static"
+  $categoryTreeBehavior: CategoryTreeBehavior = default
   $fuzzy: String
   $operator: Operator
   $searchState: String
@@ -17,6 +18,7 @@ query facetsV2(
     selectedFacets: $selectedFacets
     hideUnavailableItems: $hideUnavailableItems
     behavior: $behavior
+    categoryTreeBehavior: $categoryTreeBehavior
     fuzzy: $fuzzy
     operator: $operator
     searchState: $searchState
