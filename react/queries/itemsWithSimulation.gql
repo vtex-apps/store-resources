@@ -2,6 +2,7 @@ query itemsWithSimulation($items: [ItemInput]) {
   itemsWithSimulation(items: $items) {
     itemId
     sellers {
+      sellerId
       commertialOffer {
         AvailableQuantity
         Price
