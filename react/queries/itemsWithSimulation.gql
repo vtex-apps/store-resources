@@ -13,6 +13,7 @@ query itemsWithSimulation($items: [ItemInput]) {
           TotalValuePlusInterestRate
           NumberOfInstallments
       	}
+        spotPrice
       }
     }
   }
