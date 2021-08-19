@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Added
+- `priceDefinition` to the `updateItems` mutation
+- `priceDefinition` to the `addToCart` mutation
+- `priceDefinition` to the `orderForm` query
+
 ## [0.84.0] - 2021-08-09
 
 ### Added
