@@ -68,6 +68,14 @@ mutation addItem($orderFormId: String, $items: [OrderFormItemInput], $utmParams:
         }
         parentPrice
       }
+      priceDefinition {
+        calculatedSellingPrice
+        total
+        sellingPrices {
+          quantity
+          value
+        }
+      }
     }
     shippingData {
       address {
