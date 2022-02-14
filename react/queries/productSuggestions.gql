@@ -11,6 +11,7 @@ query productSuggestions(
   $productOriginVtex: Boolean = false
   $simulationBehavior: SimulationBehavior = default
   $hideUnavailableItems: Boolean = false
+  $orderBy: String
 ) {
   productSuggestions(
     fullText: $fullText
@@ -19,6 +20,7 @@ query productSuggestions(
     productOriginVtex: $productOriginVtex
     simulationBehavior: $simulationBehavior
     hideUnavailableItems: $hideUnavailableItems
+    orderBy: $orderBy
   ) @context(provider: "vtex.search-graphql") {
     count
     misspelled
