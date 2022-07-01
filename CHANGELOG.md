@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.87.0] - 2022-07-01
+
 ### Added
 - `count` to `productSuggestions` query.
 
