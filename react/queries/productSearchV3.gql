@@ -58,6 +58,9 @@ query productSearchV3(
         key
         value
       }
+      rule {
+        id
+      }
     }
     recordsFiltered
     correction {
