@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
-- `rule` to the `productSearch` and `productSuggestions` query.
+- `rule` to the `productSearch`, `products` and `productSuggestions` query.
 
 ## [0.87.0] - 2022-07-01
 
