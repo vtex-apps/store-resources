@@ -45,6 +45,9 @@ query productSuggestions(
         key
         value
       }
+      rule {
+        id
+      }
     }
   }
 }
