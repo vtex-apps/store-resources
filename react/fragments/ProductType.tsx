@@ -18,6 +18,7 @@ export type ProductFragment = Pick<
   | 'productClusters'
   | 'clusterHighlights'
   | 'properties'
+  | 'releaseDate'
 >
 
 export default {}

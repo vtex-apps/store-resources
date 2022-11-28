@@ -3,6 +3,7 @@ fragment ProductFragment on Product {
   productId
   description
   productName
+  releaseDate
   productReference
   linkText
   brand
