@@ -2,6 +2,7 @@ fragment ProductFragment on Product {
   cacheId
   productId
   description
+  releaseDate
   productName
   productReference
   linkText
