@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Field `releaseDate` on Product Object.
+
 ## [0.88.0] - 2022-07-20
 
 ### Added
