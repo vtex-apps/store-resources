@@ -1,4 +1,5 @@
 fragment ProductFragment on Product {
+  releaseDate
   cacheId
   productId
   description
