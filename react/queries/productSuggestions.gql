@@ -13,6 +13,7 @@ query productSuggestions(
   $hideUnavailableItems: Boolean = false
   $orderBy: String
   $count: Int
+  $shippingOptions: [String]
 ) {
   productSuggestions(
     fullText: $fullText
@@ -23,6 +24,7 @@ query productSuggestions(
     hideUnavailableItems: $hideUnavailableItems
     orderBy: $orderBy
     count: $count
+    shippingOptions: $shippingOptions
   ) @context(provider: "vtex.search-graphql") {
     count
     misspelled
