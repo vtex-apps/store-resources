@@ -8,6 +8,7 @@ query Products(
   $category: String
   $collection: String
   $specificationFilters: [String]
+  $shippingOptions: [String]
   $orderBy: String
   $from: Int
   $to: Int
@@ -19,6 +20,7 @@ query Products(
     category: $category
     collection: $collection
     specificationFilters: $specificationFilters
+    shippingOptions: $shippingOptions
     orderBy: $orderBy
     from: $from
     to: $to

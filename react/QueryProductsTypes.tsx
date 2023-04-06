@@ -35,6 +35,7 @@ export type Variables = {
   hideUnavailableItems?: boolean
   skusFilter?: ItemsFilter
   installmentCriteria?: InstallmentsCriteria
+  shippingOptions?: string[]
 }
 
 // We need to fake usage of some JS from the other modules so they
