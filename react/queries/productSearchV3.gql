@@ -21,6 +21,7 @@ query productSearchV3(
   $searchState: String
   $excludedPaymentSystems: [String]
   $includedPaymentSystems: [String]
+  $variant: String
 ) {
   productSearch(
     query: $query
@@ -35,6 +36,7 @@ query productSearchV3(
     fuzzy: $fuzzy
     operator: $operator
     searchState: $searchState
+    variant: $variant
   ) @context(provider: "vtex.search-graphql") {
     products {
       ...ProductFragment
