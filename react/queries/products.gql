@@ -15,6 +15,7 @@ query Products(
   $hideUnavailableItems: Boolean = false
   $skusFilter: ItemsFilter = ALL_AVAILABLE
   $installmentCriteria: InstallmentsCriteria = MAX_WITHOUT_INTEREST
+  $variant: String
 ) {
   products(
     category: $category
@@ -25,6 +26,7 @@ query Products(
     from: $from
     to: $to
     hideUnavailableItems: $hideUnavailableItems
+    variant: $variant
   ) @context(provider: "vtex.search-graphql") {
     ...ProductFragment
     items(filter: $skusFilter) {
