@@ -10,6 +10,7 @@ fragment ProductFragment on Product {
   link
   categories
   categoryId
+  releaseDate
   priceRange {
     sellingPrice {
       highPrice
