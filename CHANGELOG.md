@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - `releaseDate` value 
 
+## [0.91.0] - 2023-08-22
+
+### Added
+- `sponsoredProducts` query.
+
 ## [0.90.0] - 2023-04-25
 
 ### Added

@@ -1,0 +1,62 @@
+#import '../fragments/product.graphql'
+#import '../fragments/item.graphql'
+#import '../fragments/seller.graphql'
+#import '../fragments/commertialOffer.graphql'
+#import '../fragments/installment.graphql'
+
+query sponsoredProducts(
+  $fullText: String
+  $selectedFacets: [SelectedFacetInput]
+  $orderBy: String
+  $from: Int
+  $to: Int
+  $hideUnavailableItems: Boolean = false
+  $skusFilter: ItemsFilter = ALL_AVAILABLE
+  $simulationBehavior: SimulationBehavior = default
+  $installmentCriteria: InstallmentsCriteria = MAX_WITHOUT_INTEREST
+  $productOriginVtex: Boolean = false
+  $fuzzy: String
+  $operator: Operator
+  $searchState: String
+  $excludedPaymentSystems: [String]
+  $includedPaymentSystems: [String]
+) {
+  sponsoredProducts(
+    fullText: $fullText
+    selectedFacets: $selectedFacets
+    orderBy: $orderBy
+    from: $from
+    to: $to
+    hideUnavailableItems: $hideUnavailableItems
+    simulationBehavior: $simulationBehavior
+    productOriginVtex: $productOriginVtex
+    fuzzy: $fuzzy
+    operator: $operator
+    searchState: $searchState
+  ) @context(provider: "vtex.search-graphql") {
+      ...ProductFragment
+      items(filter: $skusFilter) {
+        ...ItemFragment
+        sellers {
+          ...SellerFragment
+          commertialOffer {
+            ...CommertialOfferFragment
+            Installments(
+              criteria: $installmentCriteria
+              excludedPaymentSystems: $excludedPaymentSystems
+              includedPaymentSystems: $includedPaymentSystems
+            ) {
+              ...InstallmentFragment
+            }
+          }
+        }
+      }
+      selectedProperties {
+        key
+        value
+      }
+      rule {
+        id
+      }
+    }
+}
