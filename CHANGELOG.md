@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.93.0] - 2023-09-27
+
 ### Added
 
 - Add `advertisement` field in `sponsoredProducts` query.
