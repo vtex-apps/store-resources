@@ -35,6 +35,13 @@ query sponsoredProducts(
     searchState: $searchState
   ) @context(provider: "vtex.search-graphql") {
       ...ProductFragment
+      advertisement {
+        adId
+        campaignId
+        actionCost
+        adRequestId
+        adResponseId
+      }
       items(filter: $skusFilter) {
         ...ItemFragment
         sellers {
