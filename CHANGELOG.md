@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-- `releaseDate` value 
+### Added
+
+- Add `releaseDate` field to `ProductFragment`.
+
+## [0.93.0] - 2023-09-27
+
+### Added
+
+- Add `advertisement` field in `sponsoredProducts` query.
 
 ## [0.92.0] - 2023-09-15
 
