@@ -20,6 +20,7 @@ query sponsoredProducts(
   $searchState: String
   $excludedPaymentSystems: [String]
   $includedPaymentSystems: [String]
+  $anonymousId: String
 ) {
   sponsoredProducts(
     fullText: $fullText
@@ -33,6 +34,7 @@ query sponsoredProducts(
     fuzzy: $fuzzy
     operator: $operator
     searchState: $searchState
+    anonymousId: $anonymousId
   ) @context(provider: "vtex.search-graphql") {
       ...ProductFragment
       advertisement {
