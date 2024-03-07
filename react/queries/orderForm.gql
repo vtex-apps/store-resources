@@ -53,6 +53,10 @@ query orderForm {
         brandName
       }
       canHaveAttachment
+      attachments{
+				name
+				content
+			}
       productCategoryIds
       productCategories
       skuName
