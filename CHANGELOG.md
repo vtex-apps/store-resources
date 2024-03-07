@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- `showSponsored` flag to productSearch
+
 ## [0.95.0] - 2023-12-07
 
 ### Added
