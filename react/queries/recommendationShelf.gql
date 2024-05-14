@@ -21,16 +21,11 @@ fragment RecommendationProductFragment on Product {
 }
 
 query recommendation($input: RecommendationInput) {
-  recommendation(input: $input) @context(provider: "vtex.recommendation-graphql")  {
-    response {
-      recommendations {
-        base {
-          ...RecommendationProductFragment
-        }
-        recommended {
-          ...RecommendationProductFragment
-        }
-      }
+  recommendation(input: $input)
+    @context(provider: "vtex.recommendation-graphql") {
+    products {
+      ...RecommendationProductFragment
     }
+    jwt
   }
 }
