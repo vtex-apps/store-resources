@@ -17,6 +17,7 @@ query Products(
   $installmentCriteria: InstallmentsCriteria = MAX_WITHOUT_INTEREST
   $variant: String
   $searchState: String
+  $advertisementOptions: AdvertisementOptions
 ) {
   products(
     category: $category
@@ -26,6 +27,7 @@ query Products(
     orderBy: $orderBy
     from: $from
     to: $to
+    advertisementOptions: $advertisementOptions
     hideUnavailableItems: $hideUnavailableItems
     variant: $variant
     searchState: $searchState
