@@ -2,6 +2,7 @@ import type { Product } from 'vtex.search-graphql'
 
 export type ProductFragment = Pick<
   Product,
+  | 'advertisement'
   | 'cacheId'
   | 'productId'
   | 'description'

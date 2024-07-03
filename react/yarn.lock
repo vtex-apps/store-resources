@@ -521,9 +521,9 @@ typescript@3.9.7:
   version "8.128.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.128.2/public/@types/vtex.render-runtime#67f5975f7edd73c9afa7bee57734540c0ead5428"
 
-"vtex.search-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.43.0/public/@types/vtex.search-graphql":
-  version "0.43.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.43.0/public/@types/vtex.search-graphql#ce3eabf17ad172fe4e96b374cd86a2f76306ed79"
+"vtex.search-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.60.1/public/@types/vtex.search-graphql":
+  version "0.60.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.60.1/public/@types/vtex.search-graphql#4e59e3577351d967e4b5c9594d4970783ee543bb"
 
 "vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.139.0/public/@types/vtex.store-graphql":
   version "2.139.0"
