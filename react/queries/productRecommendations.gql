@@ -7,9 +7,13 @@
 query ProductRecommendations(
   $identifier: ProductUniqueIdentifier
   $type: CrossSelingInputEnum
+  $searchState: String
 ) {
-  productRecommendations(identifier: $identifier, type: $type)
-    @context(provider: "vtex.search-graphql") {
+  productRecommendations(
+    identifier: $identifier
+    type: $type
+    searchState: $searchState
+  ) @context(provider: "vtex.search-graphql") {
     ...ProductFragment
     items {
       ...ItemFragment

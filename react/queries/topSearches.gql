@@ -1,5 +1,6 @@
-query topSearches {
-  topSearches @context(provider: "vtex.search-graphql") {
+query topSearches($searchState: String) {
+  topSearches(searchState: $searchState)
+    @context(provider: "vtex.search-graphql") {
     searches {
       term
     }
