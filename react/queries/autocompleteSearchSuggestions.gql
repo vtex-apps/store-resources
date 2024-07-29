@@ -1,5 +1,5 @@
-query autocompleteSearchSuggestions($fullText: String!) {
-  autocompleteSearchSuggestions(fullText: $fullText)
+query autocompleteSearchSuggestions($fullText: String!, $searchState: String) {
+  autocompleteSearchSuggestions(fullText: $fullText, searchState: $searchState)
     @context(provider: "vtex.search-graphql") {
     searches {
       term
