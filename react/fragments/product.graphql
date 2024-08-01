@@ -1,4 +1,9 @@
 fragment ProductFragment on Product {
+  advertisement {
+    adId
+    adResponseId
+    adRequestId
+  }
   cacheId
   productId
   description
