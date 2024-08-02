@@ -15,6 +15,7 @@ query productSuggestions(
   $count: Int
   $shippingOptions: [String]
   $variant: String
+  $advertisementOptions: AdvertisementOptions
 ) {
   productSuggestions(
     fullText: $fullText
@@ -27,6 +28,7 @@ query productSuggestions(
     count: $count
     shippingOptions: $shippingOptions
     variant: $variant
+    advertisementOptions: $advertisementOptions
   ) @context(provider: "vtex.search-graphql") {
     count
     misspelled
