@@ -13,6 +13,7 @@ query sponsoredBanners(
     bannerId
     advertisement {
       imageUrl
+      targetUrl
       campaignId
       actionCost
       adRequestId
