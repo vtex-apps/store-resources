@@ -14,10 +14,10 @@ query sponsoredBanners(
     advertisement {
       imageUrl
       targetUrl
-      campaignId
-      actionCost
-      adRequestId
       adResponseId
+      bannerImageId
+      width
+      height
     }
   }
 }
