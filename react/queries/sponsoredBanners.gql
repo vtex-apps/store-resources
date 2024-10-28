@@ -10,12 +10,11 @@ query sponsoredBanners(
     adUnit: $adUnit
     channel: $channel
   ) @context(provider: "vtex.adserver-graphql") {
-    bannerId
+    adResponseId
     advertisement {
+      bannerImageId
       imageUrl
       targetUrl
-      adResponseId
-      bannerImageId
       width
       height
     }
