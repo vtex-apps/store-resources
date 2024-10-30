@@ -11,6 +11,7 @@ query facetsV2(
   $from: Int
   $to: Int
   $initialAttributes: String
+  $variant: String
 ) {
   facets(
     query: $query
@@ -23,6 +24,7 @@ query facetsV2(
     operator: $operator
     searchState: $searchState
     initialAttributes: $initialAttributes
+    variant: $variant
   ) @context(provider: "vtex.search-graphql") {
     sampling
     breadcrumb {
