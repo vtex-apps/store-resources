@@ -1,14 +1,16 @@
 query sponsoredBanners(
-  $anonymousId: String
+  $sponsoredCount: Int
   $placement: String
   $adUnit: String
   $channel: String
+  $anonymousId: String
 ) {
   sponsoredBanners(
-    anonymousId: $anonymousId
+    sponsoredCount: $sponsoredCount
     placement: $placement
     adUnit: $adUnit
     channel: $channel
+    anonymousId: $anonymousId
   ) @context(provider: "vtex.adserver-graphql") {
     adResponseId
     advertisement {
