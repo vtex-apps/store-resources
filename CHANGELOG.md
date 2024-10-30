@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - `sponsoredBanners` query.
 
+## [0.101.0] - 2024-10-30
+
+### Added
+
+- `variant` to `facets` query, used to execute A/B tests.
+
 ## [0.100.0] - 2024-10-16
 
 ## [0.99.0] - 2024-09-16
