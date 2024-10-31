@@ -1,8 +1,8 @@
 query sponsoredBanners(
   $sponsoredCount: Int
-  $placement: String
-  $adUnit: String
-  $channel: String
+  $placement: Placement
+  $adUnit: AdUnit
+  $channel: Channel
   $anonymousId: String
 ) {
   sponsoredBanners(
