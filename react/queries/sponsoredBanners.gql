@@ -1,0 +1,24 @@
+query sponsoredBanners(
+  $sponsoredCount: Int
+  $placement: Placement
+  $adUnit: AdUnit
+  $channel: Channel
+  $anonymousId: String
+) {
+  sponsoredBanners(
+    sponsoredCount: $sponsoredCount
+    placement: $placement
+    adUnit: $adUnit
+    channel: $channel
+    anonymousId: $anonymousId
+  ) @context(provider: "vtex.adserver-graphql") {
+    adResponseId
+    advertisement {
+      bannerImageId
+      imageUrl
+      targetUrl
+      width
+      height
+    }
+  }
+}
