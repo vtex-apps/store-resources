@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "store-resources",
-  "version": "0.101.1",
+  "version": "0.101.2",
   "title": "VTEX Store Resources",
   "description": "Common VTEX Store Resources",
   "builders": {

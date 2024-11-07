@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.101.2] - 2024-11-07
+
 ### Removed
 
 - `sponsoredBanners` query.
