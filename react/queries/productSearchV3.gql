@@ -87,5 +87,8 @@ query productSearchV3(
     operator
     searchState
     redirect
+    options {
+      deliveryPromisesEnabled
+    }
   }
 }
