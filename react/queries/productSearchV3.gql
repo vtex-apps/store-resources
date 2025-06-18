@@ -74,6 +74,11 @@ query productSearchV3(
       rule {
         id
       }
+      deliveryPromisesBadges {
+        typeName
+        pickupId
+        pickupName
+      }
     }
     recordsFiltered
     correction {
@@ -87,5 +92,8 @@ query productSearchV3(
     operator
     searchState
     redirect
+    options {
+      deliveryPromisesEnabled
+    }
   }
 }
