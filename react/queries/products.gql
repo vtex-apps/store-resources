@@ -45,6 +45,10 @@ query Products(
         }
       }
     }
+    selectedProperties {
+      key
+      value
+    }
     rule {
       id
     }
