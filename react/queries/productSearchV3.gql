@@ -74,6 +74,11 @@ query productSearchV3(
       rule {
         id
       }
+      deliveryPromisesBadges {
+        typeName
+        pickupId
+        pickupName
+      }
     }
     recordsFiltered
     correction {
