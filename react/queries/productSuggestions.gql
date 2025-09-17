@@ -55,5 +55,6 @@ query productSuggestions(
         id
       }
     }
+    searchId
   }
 }
