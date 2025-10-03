@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Add `origin` parameter to `productSearchV3` and `productSuggestions` queries
+
 ## [0.104.0] - 2025-09-02
 
 ### Added
@@ -216,7 +220,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.67.0] - 2020-07-23
 ### Added
-- `PaymentSystemName` to `Installments of `Product` query.
+- `PaymentSystemName` to `Installments of`Product` query.
 
 ## [0.66.0] - 2020-07-22
 ### Added
