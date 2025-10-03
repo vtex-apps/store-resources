@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Add `origin` parameter to `productSearchV3` and `productSuggestions` queries
 
+## [0.104.1] - 2025-09-18
+
 ## [0.104.0] - 2025-09-02
 
 ### Added
