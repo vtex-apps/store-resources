@@ -8,6 +8,7 @@ query productSuggestions(
   $fullText: String!
   $facetKey: String
   $facetValue: String
+  $origin: String
   $productOriginVtex: Boolean = false
   $simulationBehavior: SimulationBehavior = default
   $hideUnavailableItems: Boolean = false
@@ -21,6 +22,7 @@ query productSuggestions(
     fullText: $fullText
     facetKey: $facetKey
     facetValue: $facetValue
+    origin: $origin
     productOriginVtex: $productOriginVtex
     simulationBehavior: $simulationBehavior
     hideUnavailableItems: $hideUnavailableItems

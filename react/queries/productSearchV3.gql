@@ -24,6 +24,7 @@ query productSearchV3(
   $variant: String
   $showSponsored: Boolean
   $advertisementOptions: AdvertisementOptions
+  $origin: String
 ) {
   productSearch(
     query: $query
@@ -41,6 +42,7 @@ query productSearchV3(
     variant: $variant
     showSponsored: $showSponsored
     advertisementOptions: $advertisementOptions
+    origin: $origin
   ) @context(provider: "vtex.search-graphql") {
     products {
       ...ProductFragment
