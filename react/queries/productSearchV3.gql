@@ -81,6 +81,7 @@ query productSearchV3(
         pickupId
         pickupName
       }
+      specification
     }
     recordsFiltered
     correction {
