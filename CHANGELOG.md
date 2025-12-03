@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Add `specification` on `productSearchV3` and `productSuggestions` queries
+
 ## [0.104.2] - 2025-10-06
 
 ### Added
