@@ -11,7 +11,7 @@ query productSuggestions(
   $origin: String
   $productOriginVtex: Boolean = false
   $simulationBehavior: SimulationBehavior = default
-  $hideUnavailableItems: Boolean = false
+  $hideUnavailableItems: Boolean
   $orderBy: String
   $count: Int
   $shippingOptions: [String]

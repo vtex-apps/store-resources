@@ -1,7 +1,7 @@
 query facets(
   $query: String
   $map: String
-  $hideUnavailableItems: Boolean = false
+  $hideUnavailableItems: Boolean
   $behavior: String = "Static"
 ) {
   facets(query: $query, map: $map, hideUnavailableItems: $hideUnavailableItems, behavior: $behavior)
