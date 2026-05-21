@@ -2,7 +2,7 @@ query facetsV2(
   $query: String
   $fullText: String
   $selectedFacets: [SelectedFacetInput]
-  $hideUnavailableItems: Boolean = false
+  $hideUnavailableItems: Boolean
   $behavior: String = "Static"
   $categoryTreeBehavior: CategoryTreeBehavior = default
   $fuzzy: String
