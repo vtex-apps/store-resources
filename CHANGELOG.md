@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.105.0] - 2026-05-21
+
 ### Changed
 
 - Search queries (`products`, `facets`, `facetsV2`, `productSearchV2`, `productSearchV3`, `productSuggestions`, `sponsoredProducts`): remove default `false` from `$hideUnavailableItems` so the variable can be omitted and resolved server-side.
