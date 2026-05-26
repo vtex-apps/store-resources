@@ -23,9 +23,9 @@ fragment ItemFragment on SKU {
     imageText
   }
   attributes {
-   id
-   name
-   value
-   visible
- }
+    id
+    name
+    value
+    visible
+  }
 }
