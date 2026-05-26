@@ -22,4 +22,10 @@ fragment ItemFragment on SKU {
     imageUrl
     imageText
   }
+  attributes {
+    id
+    name
+    value
+    visible
+  }
 }
