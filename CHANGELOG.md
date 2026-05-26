@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.106.0] - 2026-05-26
+
 ### Added
 
 - `attributes` field (non-structured SKU specifications) requested on `ItemFragment`, exposing data from `vtex.search-graphql@0.71.0` / `vtex.search-resolver@1.104.0`.
