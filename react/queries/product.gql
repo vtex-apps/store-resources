@@ -3,6 +3,7 @@
 #import '../fragments/seller.graphql'
 #import '../fragments/commertialOffer.graphql'
 #import '../fragments/installment.graphql'
+#import '../fragments/priceToken.graphql'
 
 query Product(
   $slug: String
@@ -31,6 +32,7 @@ query Product(
         sellerDefault
         commertialOffer {
           ...CommertialOfferFragment
+          ...PriceTokenFragment
           CacheVersionUsedToCallCheckout
           Installments {
             ...InstallmentFragment
