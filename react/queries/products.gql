@@ -2,6 +2,7 @@
 #import '../fragments/item.graphql'
 #import '../fragments/seller.graphql'
 #import '../fragments/commertialOffer.graphql'
+#import '../fragments/priceToken.graphql'
 #import '../fragments/installment.graphql'
 
 query Products(
@@ -39,6 +40,7 @@ query Products(
         ...SellerFragment
         commertialOffer {
           ...CommertialOfferFragment
+          ...PriceTokenFragment
           Installments(criteria: $installmentCriteria) {
             ...InstallmentFragment
           }

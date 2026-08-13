@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- `priceToken` (signed price, Pricing Fallback V2) requested on the product query through the new opt-in `PriceTokenFragment`, exposing data from `vtex.search-graphql@0.72.0` / `vtex.search-resolver@1.106.0` so storefront apps can forward it on add to cart.
+- `priceToken` (signed price, Pricing Fallback V2) requested on the product, `productSearchV3`, `Products` and `ProductRecommendations` queries through the new opt-in `PriceTokenFragment`, exposing data from `vtex.search-graphql@0.72.0` / `vtex.search-resolver@1.106.0` so storefront apps can forward it on add to cart.
 
 ## [0.106.0] - 2026-05-26
 
