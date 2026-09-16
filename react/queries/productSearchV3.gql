@@ -2,6 +2,7 @@
 #import '../fragments/item.graphql'
 #import '../fragments/seller.graphql'
 #import '../fragments/commertialOffer.graphql'
+#import '../fragments/priceToken.graphql'
 #import '../fragments/installment.graphql'
 
 query productSearchV3(
@@ -59,6 +60,7 @@ query productSearchV3(
           ...SellerFragment
           commertialOffer {
             ...CommertialOfferFragment
+            ...PriceTokenFragment
             Installments(
               criteria: $installmentCriteria
               excludedPaymentSystems: $excludedPaymentSystems

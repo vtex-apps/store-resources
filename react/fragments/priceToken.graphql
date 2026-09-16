@@ -1,0 +1,10 @@
+# Signed price (Pricing Fallback V2), exposed by `vtex.search-graphql` >= 0.72.0.
+#
+# Kept apart from CommertialOfferFragment on purpose: that fragment is also
+# spread into recommendationShelf.gql, whose provider
+# (`vtex.recommendation-graphql`) declares its own `Offer` type, without this
+# field - adding it there would invalidate that whole document. Queries opt in
+# by spreading this fragment, so each provider only gets what it can resolve.
+fragment PriceTokenFragment on Offer {
+  priceToken
+}
